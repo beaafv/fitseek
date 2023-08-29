@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = @Workout.all
+    @workouts = Workout.all
   end
 end
