@@ -1,0 +1,12 @@
+
+ <div class="container mb-4 col-12 d-flex justify-content-center ">
+ <div class="row mb-4">
+    <% @workouts.each do |workout| %>
+        <div class="card-category"
+          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+         <%= workout.category %>
+        </div>
+<% end %>
+      </div>
+
+  </div>
