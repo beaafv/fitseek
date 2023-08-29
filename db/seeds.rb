@@ -1,7 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+
+Workout.destroy_all
+
+file = URI.open('')
+workout_one = Workout.new(
+  name: "Ashtanga Yoga",
+  category: "Mobility",
+  subcategory: "Yoga",
+  description: "Unwind after a long day with a soothing Ashtanga Yoga class designed to relax and destress.",
+  address: "Rua de Conde",
+  image: "",
+  available_class_times: "20",
+  duration: 1,
+  contact: "916337934",
+  instructor_id: ""
+)
+workout_one.photo.attach(io: file, filename:"yoga.jpg", content_type:"image/png")
+workout_one.save
