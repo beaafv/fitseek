@@ -2,7 +2,7 @@ require "open-uri"
 
 Workout.destroy_all
 
-file = URI.open('')
+file = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693309450/pkg4cpxcc0amlzhmhlyy.jpg')
 workout_one = Workout.new(
   name: "Ashtanga Yoga",
   category: "Mobility",
@@ -15,5 +15,5 @@ workout_one = Workout.new(
   contact: "916337934",
   instructor_id: ""
 )
-workout_one.photo.attach(io: file, filename:"yoga.jpg", content_type:"image/png")
+workout_one.photo.attach(io: file, filename: "yoga.jpg", content_type: "image/png")
 workout_one.save
