@@ -1,14 +1,11 @@
 <h1>hello</h1>
 
 
-<div class="container">
-  <div class="row">
+
     <% @workouts.each do |workout| %>
-      <div class="col-">
-        <div class="card m-4 bg-white border-0">
-          <p class="mb-2" style="font-size:26px;"> <strong><%= workout.category%></strong> </p>
-        </div>
-      <div>
+
+      <%= workout.category %> </p>
     <% end %>
-  </div>
-</div>
+
+
+ <%= @workouts %>
