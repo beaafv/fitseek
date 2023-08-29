@@ -1,0 +1,10 @@
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <% @users.each do |user| %>
+      <div class="card-product-infos">
+        <p> <b>Hello <%= user.first_name %> <%= user.last_name %></b></p>
+        <p><%= user.birthdate %></p>
+        <p> <%= user.bio %></p>
+      </div>
+   <% end %>
+</div>
