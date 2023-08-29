@@ -3,6 +3,23 @@ require "open-uri"
 Workout.destroy_all
 Instructor.destroy_all
 
+User.destroy_all
+
+user1 = User.create(
+  email: "ahah@gmail",
+  password: "123456",
+  first_name: "Miguel",
+  last_name: "Figueiredo",
+  bio: "Really cool",
+  birthdate: "20/01/2020",
+  favourite_activities: "surfing",
+  image: "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+)
+
+user1.save!
+
+
+
 instructor1 = Instructor.create(
   name: "José",
   bio: "jnnewqhfew",
@@ -13,7 +30,7 @@ instructor1 = Instructor.create(
 )
 
 
-file = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693309450/pkg4cpxcc0amlzhmhlyy.jpg')
+file = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325804/mobility.jpg')
 workout_one = Workout.new(
   name: "Ashtanga Yoga",
   category: "Mobility",
@@ -39,7 +56,7 @@ instructor2 = Instructor.create(
   image: "jkkjk"
 )
 
-file2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693309450/pkg4cpxcc0amlzhmhlyy.jpg')
+file2 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693326647/cardio.jpg')
 workout_two = Workout.new(
   name: "Ashtanga Yoga",
   category: "Cardio",
@@ -67,7 +84,7 @@ instructor3 = Instructor.create(
 )
 
 
-file3 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693309450/pkg4cpxcc0amlzhmhlyy.jpg')
+file3 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325784/outdoors.jpg')
 workout_three = Workout.new(
   name: "Ashtanga Yoga",
   category: "Strenght",
@@ -96,7 +113,7 @@ instructor4 = Instructor.create(
 )
 
 
-file4 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693309450/pkg4cpxcc0amlzhmhlyy.jpg')
+file4 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325791/outdoors1.jpg')
 workout_four = Workout.new(
   name: "Ashtanga Yoga",
   category: "Outdoors",
