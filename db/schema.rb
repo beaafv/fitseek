@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_153114) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_28_161436) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.bigint "workout_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["workout_id"], name: "index_bookings_on_workout_id"
+  end
+
+  create_table "instructors", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.integer "years_experience"
+    t.string "certifications"
+    t.string "area_of_expertise"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +43,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_153114) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.text "bio"
+    t.date "birthdate"
+    t.string "favourite_activities"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workouts", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "subcategory"
+    t.text "description"
+    t.string "address"
+    t.string "image"
+    t.time "available_class_times"
+    t.integer "duration"
+    t.string "contact"
+    t.bigint "instructor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instructor_id"], name: "index_workouts_on_instructor_id"
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "workouts"
+  add_foreign_key "workouts", "instructors"
 end
