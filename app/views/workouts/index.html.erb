@@ -1,6 +1,3 @@
 <h1>hello</h1>
-
-
-  <% @workouts.each do |workout| %>
-    <p><%= workout.category %></p>
-  <% end %>
+<%= render "shared/profilecard", user: @user %>
+ <%= render "shared/card", workout: @workout %>
