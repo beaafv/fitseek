@@ -1,6 +1,7 @@
 <div class="searchbar">
   <%= form_with url: workouts_path, method: :get, class: "d-flex" do %>
     <input type="text" id="query" name="query" placeholder="&#xF002; Search" style="font-family: Arial, 'Font Awesome 5 Free'" />
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
 </div>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
