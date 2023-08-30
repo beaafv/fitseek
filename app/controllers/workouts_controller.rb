@@ -17,5 +17,8 @@ class WorkoutsController < ApplicationController
   end
 
   def show
+    @workout = Workout.find(params[:id])
+    @instructors = Instructor.all
+    @instructor = Instructor.find(params[:id])
   end
 end
