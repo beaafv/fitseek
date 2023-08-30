@@ -20,7 +20,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
     @instructor = Instructor.new
 
-    @workouts= Workout.all
+    @workouts = Workout.all
 
     @markers = [
       {
