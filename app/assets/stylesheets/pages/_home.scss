@@ -14,14 +14,16 @@ h1 {
   color: #CEFE91;
 }
 
-p {
+.logoclass {
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+.pfind {
   color: #CEFE91;
   text-decoration: underline;
 }
 
-.centered-img {
-  max-width: 50px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
