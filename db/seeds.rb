@@ -5,6 +5,8 @@ Instructor.destroy_all
 
 User.destroy_all
 
+
+
 user1 = User.create(
   email: "ahah@gmail",
   password: "123456",
@@ -13,7 +15,7 @@ user1 = User.create(
   bio: "Really cool",
   birthdate: "20/01/2020",
   favourite_activities: "surfing",
-  image: "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+  image: "https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325490/samples/man-portrait.jpg"
 )
 
 user1.save!
