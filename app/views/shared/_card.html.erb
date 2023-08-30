@@ -1,6 +1,6 @@
 
  <div class="container mb-4 col-12 d-flex justify-content-center ">
- <div class="row mb-4">
+  <div class="row mb-4">
     <% @workouts.each do |workout| %>
         <div class="card-category"
           style="background-image:
@@ -8,7 +8,6 @@
           url('<%= cl_image_path workout.photo.key %>')">
          <%= workout.category %>
         </div>
-<% end %>
-      </div>
-
+    <% end %>
   </div>
+</div>
