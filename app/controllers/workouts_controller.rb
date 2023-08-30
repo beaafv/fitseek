@@ -18,7 +18,18 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
-    @instructors = Instructor.all
-    @instructor = Instructor.find(params[:id])
+    @instructor = Instructor.new
+
+    @workouts= Workout.all
+
+    @markers = [
+      {
+        lat: @workout.latitude,
+        lng: @workout.longitude,
+        info_window_html: render_to_string(partial: "info_window"),
+        marker_html: render_to_string(partial: "map")
+      }
+    ]
+
   end
 end
