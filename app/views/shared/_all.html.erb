@@ -1,0 +1,13 @@
+<div class= "justify-content-center">
+<h3 class= "text-white">Browse all workouts</h3>
+  <% @workouts.each do |workout| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path workout.photo.key %>" />
+    <div class="card-product-infos">
+      <h2><%= workout.name %></h2>
+      <p><%= workout.category %></p>
+      <p><%= workout.available_class_times %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
