@@ -1,7 +1,7 @@
 <div class="bg-image unsplash-bg view";>
   <div class= "container-max-widths  vh-100 text-white">
     <div>
-        <h2>Login</h2>
+        <h1 class= "mb-3" >Login</h1>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs mb-5">
               <%= f.input :email, placeholder: 'Email',label: false,
@@ -16,7 +16,7 @@
             <div class="form-actions">
               <p><%= f.button :submit, "Log in", class: "btn btn-green form-control p-3" %></p>
             </div>
-          <% end %>
+
           <div class= "text-center">
             <div class= "mt-5 d-flex justify-content-evenly">
               <p>Don't have an account?</p>
@@ -24,15 +24,11 @@
               <%= link_to "Sign up", new_registration_path(resource_name) %>
             </div>
             <div class= "mt-5 d-flex justify-content-center">
-              <%= link_to "Enter as a guest to see our features!"%>
+              <a href="<%= workouts_path %>" >Enter as a guest to see our features!</a>
+
             </div>
       </div>
   </div>
 
+ <% end %>
 
-  <div class="form-actions">
-    <%#= f.button :submit, "Log in", class: "loginbutton" %>
-  </div>
-
-
-    <%# <%= render "devise/shared/links" %>
