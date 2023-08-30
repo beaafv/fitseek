@@ -1,12 +1,29 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.mobile-navbar {
+  background-color: #444;
+  bottom: 0;
+  display: block;
+  width: 100vw;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-list {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  justify-content: space-around;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  padding: 7px 20px;
+  display: block;
+  color: #CEFE91;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
