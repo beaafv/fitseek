@@ -9,4 +9,13 @@ class WorkoutsController < ApplicationController
       @workouts = @workouts.where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
+
+  def all
+    @workouts = Workout.all
+    @instructors = Instructor.all
+    @instructor = Instructor.find_by(params[:id])
+  end
+
+  def show
+  end
 end
