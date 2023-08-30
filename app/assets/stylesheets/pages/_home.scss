@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+@import "config/fonts";
+@import "config/colors";
+
+.header {
+  font-family: "Poppins";
+  color: #CEFE91;
+}
+.body, p, a {
+  font-family: "Roboto";
+}
