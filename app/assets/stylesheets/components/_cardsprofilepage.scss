@@ -1,0 +1,30 @@
+
+.profile-card-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #CEFE91;
+  background-color: #909193;
+  position: relative;
+  height: 12vh;
+  margin-top: 10vh;
+}
+
+#avatar2 {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #CEFE91;
+  position: absolute;
+  top: -35px;
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}

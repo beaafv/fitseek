@@ -6,13 +6,29 @@
   font-family: "Poppins";
   color: #CEFE91;
 }
-.body, p, a {
+body, p, a {
   font-family: "Roboto";
 }
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
+
+h1 {
+  color: #CEFE91;
+}
+
+p {
+  color: #CEFE91;
+  text-decoration: underline;
+}
+
+.centered-img {
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
