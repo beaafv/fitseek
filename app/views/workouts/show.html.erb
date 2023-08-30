@@ -1,4 +1,5 @@
 
+
 <%= @workout.name %>
 <%= @workout.instructor.name %>
 
@@ -10,3 +11,6 @@
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
    </div>
+
+<%= render "shared/show" %>
+
