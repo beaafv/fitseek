@@ -6,6 +6,22 @@
   font-family: "Poppins";
   color: #CEFE91;
 }
-.body, p, a {
+body, p, a {
   font-family: "Roboto";
+}
+
+h1 {
+  color: #CEFE91;
+}
+
+p {
+  color: #CEFE91;
+  text-decoration: underline;
+}
+
+.centered-img {
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
