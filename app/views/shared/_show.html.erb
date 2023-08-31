@@ -1,10 +1,16 @@
-<div class= "justify-content-center m-0">
-
-  <div class= "container-2 m-0">
-    <div class= "img-container-3" style= "background-image: url('<%= cl_image_path @workout.photo.key %>'); background-size: cover; background-position: center; width:100vw; margin:0;">
-      <h3 class= "text-white"><%= @workout.name %></h3>
-      </div>
-    </div>
 
 
+<div class="card bg-dark mb-2">
+   <div class="card-category-show"
+          style="background-image:
+          url('<%= cl_image_path @workout.photo.key %>')">
+         <%= @workout.name %> with <%= @workout.instructor.name  %>
+  </div>
+  <div class="card-body2">
+        <p><%= @workout.address %></p>
+        <p class="card-text"><b>Class:</b><%= @workout.name %></p>
+        <p class="card-text mb-4"> <b>Class duration:</b> <%=  @workout.duration%>h</p>
+        <p class="card-text mb-4"><%= @workout.description %></p>
+
+  </div>
 </div>
