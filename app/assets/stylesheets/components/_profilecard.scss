@@ -1,14 +1,15 @@
-.card-product {
+.card-product2 {
   overflow: hidden;
-  height: 120px;
+  height: 20vh;
   background: #2A2A2A;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
 
+
 }
 
-.card-product img {
+.card-product2 img {
   height: 70px;
   width: 70px;
   object-fit: cover;
@@ -18,14 +19,14 @@
 
 }
 
-.card-product h2 {
+.card-product2 h2 {
   font-size: 15px;
   font-weight: bold;
   margin: 0;
   color: #CEFE91;
 }
 
-.card-product p {
+.card-product2 p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -34,6 +35,6 @@
   color: #CEFE91;
 }
 
-.card-product .card-product-infos {
+.card-product .card-product-infos2 {
   padding: 16px;
 }

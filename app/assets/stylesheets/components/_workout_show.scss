@@ -9,3 +9,33 @@
 .text-white {
   justify-content: flex-end;
 }
+
+
+p { color: #ffffff;
+font-size:14px;
+margin: auto;}
+
+.card-category-show{
+background-size: cover;
+background-position: center;
+height: 40vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 24px;
+font-weight: bold;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+border-radius: 15px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+margin: 0;
+}
+
+
+.card-body2 {
+  flex: 1 1 auto;
+  height: 70vh;
+  margin: 20px;
+  height: 45vh;
+}
