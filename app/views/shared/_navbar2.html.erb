@@ -1,12 +1,16 @@
 <nav class="top-navbar">
  <ul class="nav-list d-flex">
- <div class="space", style= "width:0px">
-    </div>
     <div class="back-button" >
-      <%= link_to " Back", :back, class:"fa-solid fa-chevron-left", style: "color:white"%>
+      <%= link_to " Back", :back, class:"fa-solid fa-chevron-left", style:"color:white"%>
     </div>
-    <div class="space", style= "width:61px">
+    <div class="space", style= "width:56px">
     </div>
     <%= image_tag 'fs.png', class: "avatar logoclass2 d-flex justify-content-center" %>
+     </div>
+    <div class="space", style= "width:110px">
+    </div>
+    <div class="notification mt-3">
+    <%= link_to "", :profile , class:"fa-solid fa-bell", style: "color:white"%>
+    </div>
   </ul>
 </nav>
