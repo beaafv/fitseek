@@ -18,6 +18,7 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
+    @booking = Booking.new
     @instructor = Instructor.new
 
     @workouts = Workout.all
