@@ -26,11 +26,17 @@ h1 {
   max-width: 260px;
   height: auto;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-
 .pfind {
-  color: #CEFE91;
-  text-decoration: underline;
+  color: #f6f7f5;
+  text-decoration: none;
+  font-size: larger;
+  font-family:'Poppins';
+}
+
+.btn-green {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgb(43, 75, 7);
 }
