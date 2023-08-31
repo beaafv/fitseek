@@ -1,8 +1,8 @@
 
-<div class="card bg-dark mb-2">
+<div class="card bg-dark mb-2" style="height: 100vh;">
    <div class="card-category-show"
           style="background-image:
-          url('<%= cl_image_path @workout.photo.key %>')">
+          url('<%= cl_image_path @workout.photo.key %>'); color: #CEFE91;">
          <%= @workout.name %> with <%= @workout.instructor.name  %>
     </div>
     <div class="card-body2">
@@ -10,6 +10,15 @@
         <p class="card-text"><b>Class:</b><%= @workout.name %></p>
         <p class="card-text mb-4"> <b>Class duration:</b> <%=  @workout.duration%>h</p>
         <p class="card-text mb-4"><%= @workout.description %></p>
-
+        <p style="color:green;">___________________________________________________</p>
+        <div class="col-md-12 mt-2 mb-4">
+                  <div class="d-flex justify-content-center">
+                    <%= simple_form_for [@workout, @booking] do |f| %>
+                      <%= f.input :date, class: "form-control"%>
+                      <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton" %>
+                    <% end %>
+                  </div>
+              </div>
   </div>
+
 </div>

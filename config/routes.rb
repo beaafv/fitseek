@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     collection do
       get :all
     end
-    resources :bookings, only: [:new,:create, :show]
+    resources :bookings, only: [:show,:new,:create ]
   end
   resources :instructors, only: [:show]
   resources :bookings, only: [:destroy]
