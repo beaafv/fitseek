@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
     @user = User.find_by(params[:id])
 
     if params[:query].present?
-      sql_subquery = "category ILIKE :query OR subcategory ILIKE :query"
+      sql_subquery = "name ILIKE :query OR category ILIKE :query"
       @workouts = @workouts.where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
@@ -18,6 +18,7 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
+    @booking = Booking.new
     @instructor = Instructor.new
 
     @workouts = Workout.all

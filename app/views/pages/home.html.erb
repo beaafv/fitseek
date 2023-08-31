@@ -13,3 +13,11 @@
     </div>
   </div>
 </div>
+
+<% if user_signed_in? %>
+        <div> Welcome back, <%= current_user.first_name %>! </div>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"loginbutton2" %>
+          <%else%>
+            <a href="<%= new_user_registration_path %>" class="loginbutton2">Sign Up</a>
+            <a href="<%= new_user_session_path %>" class="loginbutton2">Login</a>
+      <% end %>

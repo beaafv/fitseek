@@ -1,16 +1,20 @@
 
-
-<%= @workout.name %>
-<%= @workout.instructor.name %>
+<%= render "shared/show" %>
 
 
-
-
-  <div style="width: 100%; height: 25vh"
+  <div class="mt-5"style="width: 100vw; height: 25vh"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
    </div>
 
-<%= render "shared/backbutton" %>
-<%= render "shared/show" %>
+      <div class="col-md-4 mt-2">
+          <div class="d-flex justify-content-center">
+            <%= simple_form_for [@workout, @booking] do |f| %>
+              <%= f.input :date, class: "form-control"%>
+              <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton" %>
+            <% end %>
+          </div>
+      </div>
+
+<%= render "shared/navbar" %>
