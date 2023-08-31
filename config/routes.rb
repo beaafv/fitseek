@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :workouts, only: [:index, :show] do
     collection do
       get :all
-    resources :bookings, only: [:show, :create]
     end
+    resources :bookings, only: [:new,:create, :show]
   end
   resources :instructors, only: [:show]
   resources :bookings, only: [:destroy]

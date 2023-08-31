@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 @import "config/fonts";
 @import "config/colors";
+@import "components/signupbuttons";
 
 .header {
   font-family: "Poppins";
@@ -33,4 +34,3 @@ h1 {
   color: #CEFE91;
   text-decoration: underline;
 }
-
