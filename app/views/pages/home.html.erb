@@ -9,15 +9,15 @@
 
     </div>
     <div class="d-flex justify-content-center mt-3">
-    <a href="<%= user_session_path %>" class="btn btn-green form-control"><strong>Get started!</a></strong>
+        <% if user_signed_in? %>
+          <div class="d-flex justify-content-center mt-3">
+          <div> Welcome back, <%= current_user.first_name %>! </div>
+          <a href="<%= workouts_path %>" class="btn btn-green form-control"><strong>Get started!</a></strong>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"loginbutton2" %>
+          </div>
+          <%else%>
+            <a href="<%= user_session_path %>" class="btn btn-green form-control"><strong>Get started!</a></strong>
+      <% end %>
     </div>
   </div>
 </div>
-
-<% if user_signed_in? %>
-        <div> Welcome back, <%= current_user.first_name %>! </div>
-          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"loginbutton2" %>
-          <%else%>
-            <a href="<%= new_user_registration_path %>" class="loginbutton2">Sign Up</a>
-            <a href="<%= new_user_session_path %>" class="loginbutton2">Login</a>
-      <% end %>

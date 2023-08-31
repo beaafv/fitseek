@@ -1,19 +1,38 @@
 class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
+    @workout = Workout.find_by(params[:id])
     @users = User.all
     @user = User.find_by(params[:id])
 
     if params[:query].present?
-      sql_subquery = "name ILIKE :query OR category ILIKE :query"
-      @workouts = @workouts.where(sql_subquery, query: "%#{params[:query]}%")
+      sql_subquery = <<~SQL
+        workouts.name ILIKE :query
+        OR workouts.category ILIKE :query
+        OR workouts.subcategory ILIKE :query
+        OR instructors.name ILIKE :query
+      SQL
+      @workouts = @workouts.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
     end
+
   end
 
   def all
     @workouts = Workout.all
+    @workout = Workout.find_by(params[:id])
+    
+
     @instructors = Instructor.all
     @instructor = Instructor.find_by(params[:id])
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        workouts.name ILIKE :query
+        OR workouts.category ILIKE :query
+        OR workouts.subcategory ILIKE :query
+        OR instructors.name ILIKE :query
+      SQL
+      @workouts = @workouts.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show
