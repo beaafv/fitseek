@@ -1,0 +1,58 @@
+.profile-card-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #CEFE91;
+  background-color: #909193;
+  position: relative;
+  height: 10vh;
+  margin-top: -25px;
+  border-radius: 5px;
+}
+
+#avatar2 {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #CEFE91;
+  position: absolute;
+  top: -17px;
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-profile2 {
+  color: #545454;
+  background-color: #CEFE91;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  border-radius: 0px;
+  border-color: #CEFE91;
+  padding: 15px;
+ }
+
+ .icon-profile2 {
+  color: #070707;
+  margin-top: 2px;
+ }
+
+ .card-profile-body2{
+  margin-left: 5%;
+ }
+
+ .chevron-profile2 {
+  color: #CEFE91;
+  margin-top: 3px;
+  // float: right;
+  // text-align: right;
+ }
