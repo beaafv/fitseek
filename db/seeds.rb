@@ -1,10 +1,10 @@
 require "open-uri"
 
+Booking.destroy_all
 Workout.destroy_all
 Instructor.destroy_all
 
 User.destroy_all
-
 
 
 user1 = User.create(
