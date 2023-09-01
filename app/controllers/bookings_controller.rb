@@ -17,6 +17,8 @@ class BookingsController < ApplicationController
     params.require(:bookings).permit(:date)
   end
 
+  
+
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
