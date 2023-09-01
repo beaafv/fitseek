@@ -1,6 +1,5 @@
 <%= render "shared/navbar2" %>
 <%= @user.first_name %><%= @user.last_name %>
-<%= @user.favourite_activities %>
 <%= render "shared/cardsdashboard", user: @user %>
 <%= render "shared/navbar" %>
 
@@ -23,3 +22,28 @@
 </div>
 <% end %>
 </div>
+
+
+
+
+<div class="container d-flex yello", data-controller="toggle">
+    <div class="row">
+      <p data-action="click->toggle#functiontoggle"> Upcoming classes</p>
+      <div data-toggle-target="div1">
+       ZUmba with kenneth!!</P>
+    </div>
+     <p data-action="click->toggle#functiontoggle2"> Past classes</p>
+  <div class="d-none", data-toggle-target="div2">
+       ZUmba with kenneth!!</P>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+

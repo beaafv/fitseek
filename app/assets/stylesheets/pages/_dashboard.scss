@@ -1,1 +1,34 @@
 @import "home";
+// @import 'toggle';
+.div1 {
+  width: 50%;
+  float: left;
+  color: #CEFE91;
+}
+
+.div2 {
+  width: 50%;
+  float: right;
+  color: #CEFE91;
+}
+
+
+.div2 h6 {
+  color: #CEFE91;
+}
+
+
+.hello {
+  width: 50%;
+  float: left;
+  color: #CEFE91;
+  text-decoration: underline#CEFE91;
+}
+
+.hello2 {
+  text-decoration: underline #CEFE91;;
+}
+.yello{
+  display: flex;
+  flex-direction: row;
+}

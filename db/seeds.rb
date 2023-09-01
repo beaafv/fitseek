@@ -29,7 +29,7 @@ instructor1 = Instructor.create(
   image: "jkkjk"
 )
 
-file = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325804/mobility.jpg')
+file = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693569015/612fe5fa9ef1e50018f94959_vtgnzs.jpg')
 workout_one = Workout.new(
   name: "Ashtanga Yoga",
   category: "Mobility",
@@ -54,7 +54,7 @@ instructor2 = Instructor.create(
   image: "jkkjk"
 )
 
-file2 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693326647/cardio.jpg')
+file2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568788/men-women-biking-gym-exercising-legs-doing-cardio-workout-cycling-bikes-spinning-health-club-wearing-tracksuit-sportive-outfit_183219-5220_mkniic.jpg')
 workout_two = Workout.new(
   name: "Soul Cycle",
   category: "Cardio",
@@ -82,7 +82,7 @@ instructor3 = Instructor.create(
 )
 
 
-file3 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325784/outdoors.jpg')
+file3 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568596/IMG_3269_bn1r7r.jpg')
 workout_three = Workout.new(
   name: "Rumble Boxing",
   category: "Strength",
@@ -99,15 +99,15 @@ workout_three.photo.attach(io: file3, filename: "yoga.jpg", content_type: "image
 workout_three.save!
 
 instructor4 = Instructor.create(
-  name: "Michelle",
-  bio: "I believe scary goals can become achievable goals through consistency and smart training. You do not have to sacrifice your entire life to be a successful climber.",
+  name: "Miguel",
+  bio: "I believe scary goals can become achievable goals through consistency and smart training. You do not have to sacrifice your entire life to be a successful climber. I celebrate my achievements on rooftops with a bottle of wine.",
   years_experience: "10",
   certifications: "B.S. Biology, UESCA",
-  area_of_expertise: "Rock climbing",
+  area_of_expertise: "Rock climbing, Bouldering",
   image: "jkkjk"
 )
 
-file4 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325791/outdoors1.jpg')
+file4 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568210/IMG_5876_ogfhd4.jpg')
 workout_four = Workout.new(
   name: "Rockclimbing",
   category: "Outdoors",
