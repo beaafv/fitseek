@@ -46,13 +46,17 @@
   margin-top: 2px;
  }
 
- .card-profile-body2{
-  margin-left: 5%;
- }
 
- .chevron-profile2 {
+
+ .card-workouts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   color: #CEFE91;
-  margin-top: 3px;
-  // float: right;
-  // text-align: right;
- }
+  background-color: #545454;
+  position: relative;
+  height: auto;
+  margin-top: -25px;
+  border-radius: 5px;
+}

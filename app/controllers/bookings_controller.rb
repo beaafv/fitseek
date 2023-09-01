@@ -1,27 +1,29 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+  end
+
   def create
-    @user = User.find(params[:id])
     @workout = Workout.find(params[:workout_id])
-    @booking.workout = @workout
     @booking = Booking.new(bookings_params)
+    @booking.workout = @workout
     @booking.user = current_user
     @booking.save
     if @booking.save
-      redirect_to profile_path, notice: 'Booking saved!'
+      redirect_to dashboard_path, notice: 'Booking saved!'
     else
       render "workouts/show", status: :unprocessable_entity
     end
   end
-
-  def bookings_params
-    params.require(:bookings).permit(:date)
-  end
-
-  
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
   end
 
+  private
+
+  def bookings_params
+    params.require(:booking).permit(:date)
+  end
 end
