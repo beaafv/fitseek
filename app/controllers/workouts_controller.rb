@@ -14,13 +14,16 @@ class WorkoutsController < ApplicationController
       SQL
       @workouts = @workouts.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
     end
+  end
 
+  def new
+    @workout = Workout.new
   end
 
   def all
     @workouts = Workout.all
     @workout = Workout.find_by(params[:id])
-    
+
 
     @instructors = Instructor.all
     @instructor = Instructor.find_by(params[:id])
@@ -51,5 +54,23 @@ class WorkoutsController < ApplicationController
       }
     ]
 
+  end
+
+  def create
+    @bookings = Booking.all
+    @user.booking = current_user
+    @workout = Workout.find(params[:workout_id])
+    @booking = Booking.new(bookings_params)
+   
+    if @booking.save
+      redirect_to dashboard_path, notice: 'Booking saved!'
+    else
+      render "workouts/show", status: :unprocessable_entity
+    end
+  end
+
+  private
+  def bookings_params
+    params.require(:booking).permit(:date)
   end
 end
