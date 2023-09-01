@@ -1,7 +1,8 @@
+<%# <%= javascript_include_tag 'toggle' %>
 <%= render "shared/navbar2" %>
 <%= @user.first_name %><%= @user.last_name %>
 <%= @user.favourite_activities %>
 <%= render "shared/cardsdashboard", user: @user %>
-
-
 <%= render "shared/navbar" %>
+<div class="div1 text-center mt-3 "><h6>Upcoming Classes</h6></div>
+<div class="div2 text-center mt-3 "><h6>Past Classes</h6></div>
