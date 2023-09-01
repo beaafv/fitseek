@@ -12,14 +12,23 @@
   color: #CEFE91;
 }
 
-.toggleDiv {
-  display: none;
-  padding: 10px;
-  border: 1px solid #CEFE91;
-  cursor: pointer;
-  text-decoration: none;
+
+.div2 h6 {
+  color: #CEFE91;
 }
 
-.underline {
-  text-decoration: underline;
+
+.hello {
+  width: 50%;
+  float: left;
+  color: #CEFE91;
+  text-decoration: underline#CEFE91;
+}
+
+.hello2 {
+  text-decoration: underline #CEFE91;;
+}
+.yello{
+  display: flex;
+  flex-direction: row;
 }
