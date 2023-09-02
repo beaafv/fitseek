@@ -10,6 +10,7 @@
     <div class="row">
       <p data-action="click->toggle#functiontoggle"> Upcoming classes</p>
       <div data-toggle-target="div1">
+
        Zumba with kenneth!!</P>
     </div>
      <p data-action="click->toggle#functiontoggle2"> Past classes</p>
@@ -17,3 +18,53 @@
        Zumba with kenneth!!</P>
     </div>
 </div>
+=======
+
+
+<div class="container p-4" mb-4  style= "width:100vw; height:100vh";>
+  <% @bookings.each do |booking| %>
+<div style="background-color: #2A2A2A;">
+  <div class="notification container m-2 border-0 rounded " style="max-width: 100vw;">
+    <div class="notification-content m-2">
+    <div class="m-2">
+      <h4 class= "text-white mt-1"> <%= booking.workout.name %></h4>
+      <p><%= booking.workout.category %></p>
+      <p><%= booking.date %></p>
+      <p><%= booking.workout.address %></p>
+    </div>
+  <%= link_to 'Cancel class', booking_path(booking), data: { "turbo-method": :delete } %>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+
+
+    </div>
+     <p data-action="click->toggle#functiontoggle2"> Past classes</p>
+  <div class="d-none", data-toggle-target="div2">
+
+
+<div class="container p-4" mb-4  style= "width:100vw; height:100vh";>
+
+<div style="background-color: #2A2A2A;">
+  <div class="notification container m-2 border-0 rounded " style="max-width: 100vw;">
+    <div class="notification-content m-2">
+    <div class="m-2">
+      <h4 class= "text-white mt-1"> Yoga</h4>
+      <p>Mobility</p>
+      <p>15/11/2023</p>
+      <p>Rua do conde Redondo</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</P>
+    </div>
+
+
+</div>
+
