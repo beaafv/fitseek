@@ -1,6 +1,9 @@
 <%= render "shared/navbar2" %>
+<% if user_signed_in?%>
+<%= render "shared/cardsprofilepage", user: @user %>
 <%= @user.first_name %><%= @user.last_name %>
 <%= render "shared/cardsdashboard", user: @user %>
+<% end %>
 <%= render "shared/navbar" %>
 
 
@@ -67,4 +70,3 @@
 
 
 </div>
-
