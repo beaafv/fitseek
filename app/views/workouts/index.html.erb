@@ -1,6 +1,8 @@
  <%= render "shared/navbar2" %>
-<%= render "shared/profilecard", user: @user %>
-<%# <%= render "shared/cardsprofilepage", user: @user %>
+<%# <%= render "shared/profilecard", user: @user %>
+<% if user_signed_in?%>
+<%= render "shared/cardsprofilepage", user: @user %>
+<% end %>
 
 <%= render "shared/searchbar" %>
  <%= render "shared/card", workout: @workout %>

@@ -1,12 +1,12 @@
 require "open-uri"
-
+puts "working to destroy"
 Booking.destroy_all
 Workout.destroy_all
 Instructor.destroy_all
-
 User.destroy_all
 
-
+puts "destroyed previous entries"
+pic1 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693751396/tgpks3ak5x3dn74834zm.jpg')
 user1 = User.create(
   email: "ahah@gmail",
   password: "123456",
@@ -17,9 +17,11 @@ user1 = User.create(
   favourite_activities: "surfing",
   image: "https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325490/samples/man-portrait.jpg"
 )
-
+user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
 
+user1.save!
+puts "created user"
 instructor1 = Instructor.create(
   name: "José",
   bio: "José is a running and fitness expert and adventurepreneur who inspires every day mortals to run their best lives.",
@@ -148,7 +150,7 @@ workout_five = Workout.new(
 workout_five.photo.attach(io: file5, filename: "yoga.jpg", content_type: "image/png")
 workout_five.save!
 
-
+puts "5 instructors and workouts created"
 instructor6 = Instructor.create(
   name: "Michele",
   bio: "Michele is a 2x Olympic Trials qualifier in the marathon and a 4x USATF National Champion in the mountain and ultra trail events also representing the US at the World and NACAC Championships multiple times and distances.",
@@ -278,6 +280,8 @@ workout_ten = Workout.new(
 )
 workout_ten.photo.attach(io: file10, filename: "yoga.jpg", content_type: "image/png")
 workout_ten.save!
+
+puts "10 instructors and workouts created- woohoo halfway there"
 
 instructor11 = Instructor.create(
   name: "Matt",
@@ -480,6 +484,8 @@ workout_eighteen = Workout.new(
 )
 workout_eighteen.photo.attach(io: file18, filename: "yoga.jpg", content_type: "image/png")
 workout_eighteen.save!
+
+puts "18 done... two more to go...almost there yay"
 
 instructor19 = Instructor.create(
   name: "James",
