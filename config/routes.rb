@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :workouts, only: [:index, :show] do
     collection do
-      get :all
+      get :all, :mobility, :strength, :cardio, :outdoors
     end
     resources :bookings, only: [:show,:new,:create ]
   end

@@ -61,12 +61,32 @@ class WorkoutsController < ApplicationController
     @user.booking = current_user
     @workout = Workout.find(params[:workout_id])
     @booking = Booking.new(bookings_params)
-   
+
     if @booking.save
       redirect_to dashboard_path, notice: 'Booking saved!'
     else
       render "workouts/show", status: :unprocessable_entity
     end
+  end
+
+  def mobility
+    @workouts = Workout.where(category: "Mobility")
+    @workout = Workout.find_by(params[:id])
+  end
+
+  def strength
+    @workouts = Workout.where(category: "Strength")
+    @workout = Workout.find_by(params[:id])
+  end
+
+  def cardio
+    @workouts = Workout.where(category: "Cardio")
+    @workout = Workout.find_by(params[:id])
+  end
+
+  def outdoors
+    @workouts = Workout.where(category: "Outdoors")
+    @workout = Workout.find_by(params[:id])
   end
 
   private
