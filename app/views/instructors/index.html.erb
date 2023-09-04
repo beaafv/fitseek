@@ -1,0 +1,21 @@
+
+<%= render "shared/navbar2" %>
+<%= render "shared/searchbar" %>
+<div class= "justify-content-center mb-4">
+<h3 class= "text-white mb-4">Meet our instructors</h3>
+
+  <% @instructors.each do |instructor| %>
+  <%=link_to instructor_path(instructor) do %>
+    <div class="card-product mb-4">
+      <%# <img class="allworkoutsimage"src="<%= cl_image_path workout.photo.key %>
+    <div class="card-product-infos">
+      <h2 class="mt-2"><%= instructor.name %></h2>
+      <p><%= instructor.certifications %></p>
+      <p>Favourite Activity: <%= instructor.area_of_expertise %></p>
+      <p class="mb-2">Years Experience: <%= instructor.years_experience %></p>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+</div>
+<%= render "shared/navbar" %>
