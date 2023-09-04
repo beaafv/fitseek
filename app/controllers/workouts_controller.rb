@@ -43,9 +43,7 @@ class WorkoutsController < ApplicationController
     @booking = Booking.new
     @instructors = Instructor.all
     @instructor = Instructor.find(params[:id])
-
     @workouts = Workout.all
-
     @markers = [
       {
         lat: @workout.latitude,
@@ -54,7 +52,6 @@ class WorkoutsController < ApplicationController
         marker_html: render_to_string(partial: "map")
       }
     ]
-
   end
 
   def create
