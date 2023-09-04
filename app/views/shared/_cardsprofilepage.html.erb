@@ -1,5 +1,5 @@
 <div class="profile-card-avatar mt-1 mb-4">
-  <img id="avatar2" src="<%= cl_image_path user.photo.key %>" />
+  <img id="avatar2" src="<%= cl_image_tag user.photo.key %>" />
       <div class="card-product-infos2">
         <div class="container d-flex">
         <p> <b>Hello, <%= @user.first_name %> <%= @user.last_name %></b> 💪
