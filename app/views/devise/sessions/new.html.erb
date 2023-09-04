@@ -1,9 +1,9 @@
 <div class="body-home";>
-  <div class= "container-max-widths  vh-100 text-white">
-    <div>
-        <h1 class= "mb-3" >Login</h1>
+  <div class= "container mt-4 d-flex  vh-100 text-white">
+    <div class="row justify-content-center align-items-center">
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs mb-5">
+            <h1 class="mb-2">Login</h1>
               <%= f.input :email, placeholder: 'Email',label: false,
                           required: false,
                           autofocus: true,
@@ -20,12 +20,13 @@
           <div class= "text-center">
             <div class= "mt-5 d-flex justify-content-evenly">
               <p>Don't have an account?</p>
-              <br>
-              <%= link_to "Sign up", new_registration_path(resource_name) %>
+              <p>
+              <%= link_to "Sign up", new_registration_path(resource_name) %> </p>
             </div>
             <div class= "mt-5 d-flex justify-content-center">
               <a href="<%= workouts_path %>" >Enter as a guest to see our features!</a>
 
+            </div>
             </div>
       </div>
   </div>
