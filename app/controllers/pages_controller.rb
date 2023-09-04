@@ -13,4 +13,7 @@ class PagesController < ApplicationController
     @workouts = Workout.all
     @bookings = Booking.where(user: current_user)
   end
+
+  def test
+  end
 end
