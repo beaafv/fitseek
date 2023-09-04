@@ -10,7 +10,10 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = User.find_by(params[:id])
-    @workouts = Workout.all
+    @workout = Workout.find_by(params[:id])
     @bookings = Booking.where(user: current_user)
+  end
+
+  def test
   end
 end
