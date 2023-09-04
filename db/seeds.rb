@@ -14,8 +14,7 @@ user1 = User.create(
   last_name: "Figueiredo",
   bio: "Really cool",
   birthdate: "20/01/2020",
-  favourite_activities: "surfing",
-  image: "https://res.cloudinary.com/dxt5xabdb/image/upload/v1693325490/samples/man-portrait.jpg"
+  favourite_activities: "surfing"
 )
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
