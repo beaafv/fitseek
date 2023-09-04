@@ -21,7 +21,7 @@ user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
 
 user1.save!
-puts "created user"
+puts "creating instructor"
 instructor1 = Instructor.create(
   name: "José",
   bio: "José is a running and fitness expert and adventurepreneur who inspires every day mortals to run their best lives.",
@@ -31,6 +31,7 @@ instructor1 = Instructor.create(
   image: "jkkjk"
 )
 
+puts "creating workout"
 file = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693569015/612fe5fa9ef1e50018f94959_vtgnzs.jpg')
 workout_one = Workout.new(
   name: "Ashtanga Yoga",
@@ -46,6 +47,7 @@ workout_one = Workout.new(
 )
 workout_one.photo.attach(io: file, filename: "yoga.jpg", content_type: "image/png")
 workout_one.save!
+puts "creating instructor no 2"
 
 instructor2 = Instructor.create(
   name: "Manuel",
@@ -56,6 +58,7 @@ instructor2 = Instructor.create(
   image: "jkkjk"
 )
 
+puts "creating workout 2"
 file2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568788/men-women-biking-gym-exercising-legs-doing-cardio-workout-cycling-bikes-spinning-health-club-wearing-tracksuit-sportive-outfit_183219-5220_mkniic.jpg')
 workout_two = Workout.new(
   name: "Soul Cycle",
@@ -73,7 +76,7 @@ workout_two.photo.attach(io: file2, filename: "yoga.jpg", content_type: "image/p
 workout_two.save!
 
 
-
+puts "creating instructor3"
 instructor3 = Instructor.create(
   name: "Kenneth",
   bio: "Kenneth has over 35 years of experience coaching boxers of all ability levels.",
@@ -83,6 +86,7 @@ instructor3 = Instructor.create(
   image: "jkkjk"
 )
 
+puts "creating workout 3"
 
 file3 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568596/IMG_3269_bn1r7r.jpg')
 workout_three = Workout.new(
