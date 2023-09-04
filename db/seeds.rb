@@ -14,7 +14,7 @@ user1 = User.create(
   last_name: "Figueiredo",
   bio: "Really cool",
   birthdate: "20/01/2020",
-  favourite_activities: "surfing",
+  favourite_activities: "surfing"
 )
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
