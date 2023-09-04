@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   def create
     @workout = Workout.find(params[:workout_id])
     @booking = Booking.new(bookings_params)
+    @instructor = @workout.instructor
     @booking.workout = @workout
     @booking.user = current_user
     @booking.save
