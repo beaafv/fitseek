@@ -20,8 +20,8 @@ user1 = User.create(
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
 
-user1.save!
 puts "creating instructor"
+file1a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693837769/Jos%C3%A9%20-%20Instructor%201.jpg')
 instructor1 = Instructor.create(
   name: "José",
   bio: "José is a running and fitness expert and adventurepreneur who inspires every day mortals to run their best lives.",
@@ -30,6 +30,8 @@ instructor1 = Instructor.create(
   area_of_expertise: "Ashtanga Yoga",
   image: "jkkjk"
 )
+instructor1.photo.attach(io: file1a, filename: "yoga.jpg", content_type: "image/png")
+instructor1.save!
 
 puts "creating workout"
 file = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693569015/612fe5fa9ef1e50018f94959_vtgnzs.jpg')
@@ -48,7 +50,7 @@ workout_one = Workout.new(
 workout_one.photo.attach(io: file, filename: "yoga.jpg", content_type: "image/png")
 workout_one.save!
 puts "creating instructor no 2"
-
+file2a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693837952/Manuel%20Instructor%202.jpg')
 instructor2 = Instructor.create(
   name: "Manuel",
   bio: "I have been coaching since studying Exercise Physiology at university and love using my knowledge of sports science to help my athletes’ achieve their goals.",
@@ -57,6 +59,8 @@ instructor2 = Instructor.create(
   area_of_expertise: "gyms",
   image: "jkkjk"
 )
+instructor2.photo.attach(io: file2a, filename: "yoga.jpg", content_type: "image/png")
+instructor2.save!
 
 puts "creating workout 2"
 file2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568788/men-women-biking-gym-exercising-legs-doing-cardio-workout-cycling-bikes-spinning-health-club-wearing-tracksuit-sportive-outfit_183219-5220_mkniic.jpg')
@@ -77,6 +81,7 @@ workout_two.save!
 
 
 puts "creating instructor3"
+file3a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838039/Kenneth%20Instructor%203.jpg')
 instructor3 = Instructor.create(
   name: "Kenneth",
   bio: "Kenneth has over 35 years of experience coaching boxers of all ability levels.",
@@ -85,6 +90,8 @@ instructor3 = Instructor.create(
   area_of_expertise: "Boxing and Pilates",
   image: "jkkjk"
 )
+instructor3.photo.attach(io: file3a, filename: "yoga.jpg", content_type: "image/png")
+instructor3.save!
 
 puts "creating workout 3"
 
@@ -104,6 +111,7 @@ workout_three = Workout.new(
 workout_three.photo.attach(io: file3, filename: "yoga.jpg", content_type: "image/png")
 workout_three.save!
 
+file4a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693567657/IMG_5876_kbhwiv.jpg')
 instructor4 = Instructor.create(
   name: "Miguel",
   bio: "I believe scary goals can become achievable goals through consistency and smart training. You do not have to sacrifice your entire life to be a successful climber. I celebrate my achievements on rooftops with a bottle of wine.",
@@ -112,6 +120,8 @@ instructor4 = Instructor.create(
   area_of_expertise: "Rock climbing, Bouldering",
   image: "jkkjk"
 )
+instructor4.photo.attach(io: file4a, filename: "yoga.jpg", content_type: "image/png")
+instructor4.save!
 
 file4 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568210/IMG_5876_ogfhd4.jpg')
 workout_four = Workout.new(
@@ -129,6 +139,7 @@ workout_four = Workout.new(
 workout_four.photo.attach(io: file4, filename: "yoga.jpg", content_type: "image/png")
 workout_four.save!
 
+file5a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693837603/Megan%20Instructor%205.jpg')
 instructor5 = Instructor.create(
   name: "Megan",
   bio: "Megan is a passionate yoga instructor who has been teaching for the past 5 years. Her classes are a combination of Hatha and Yin styles and may include elements of meditation and chanting. Megan is known for her attention to detail and her ability to make yoga accessible to beginners.",
@@ -137,6 +148,8 @@ instructor5 = Instructor.create(
   area_of_expertise: "Yoga",
   image: "jkkjk"
 )
+instructor5.photo.attach(io: file5a, filename: "yoga.jpg", content_type: "image/png")
+instructor5.save!
 
 file5 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693474667/r4gf4psyydaahazqqrjq_fjba6t.jpg')
 workout_five = Workout.new(
@@ -155,6 +168,8 @@ workout_five.photo.attach(io: file5, filename: "yoga.jpg", content_type: "image/
 workout_five.save!
 
 puts "5 instructors and workouts created"
+
+file6a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838235/Michele%20Instructor%206.jpg')
 instructor6 = Instructor.create(
   name: "Michele",
   bio: "Michele is a 2x Olympic Trials qualifier in the marathon and a 4x USATF National Champion in the mountain and ultra trail events also representing the US at the World and NACAC Championships multiple times and distances.",
@@ -163,6 +178,8 @@ instructor6 = Instructor.create(
   area_of_expertise: "Running",
   image: "jkkjk"
 )
+instructor6.photo.attach(io: file6a, filename: "yoga.jpg", content_type: "image/png")
+instructor6.save!
 
 file6 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693475925/xcjtgcvw69mngsiafalq_dtloo4.jpg')
 workout_six = Workout.new(
@@ -180,7 +197,7 @@ workout_six = Workout.new(
 workout_six.photo.attach(io: file6, filename: "yoga.jpg", content_type: "image/png")
 workout_six.save!
 
-
+file7a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838660/Sean%20Instructor%207.jpg')
 instructor7 = Instructor.create(
   name: "Sean",
   bio: "Sean has received his education in the Advanced Personal Training program at the Swedish Institute of Health Sciences and is a New York State Licensed Massage Therapist with over 17 years of experience. ",
@@ -189,6 +206,8 @@ instructor7 = Instructor.create(
   area_of_expertise: "Strength",
   image: "jkkjk"
 )
+instructor7.photo.attach(io: file7a, filename: "yoga.jpg", content_type: "image/png")
+instructor7.save!
 
 file7 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693477091/aqabawbbm9dvauieuhzr_p0xglw.jpg')
 workout_seven = Workout.new(
@@ -207,7 +226,7 @@ workout_seven.photo.attach(io: file7, filename: "yoga.jpg", content_type: "image
 workout_seven.save!
 
 
-
+file8a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838768/Scott%20Instructor%208.jpg')
 instructor8 = Instructor.create(
   name: "Scott",
   bio: "Scott is an accomplished strength, performance and conditioning coach, as well as a former elite cyclist who competed across Europe.",
@@ -216,6 +235,8 @@ instructor8 = Instructor.create(
   area_of_expertise: "Strength & Conditioning",
   image: "jkkjk"
 )
+instructor8.photo.attach(io: file8a, filename: "yoga.jpg", content_type: "image/png")
+instructor8.save!
 
 file8 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693478018/xiosc0e2pkl87uumzssd_ztbdt3.jpg')
 workout_eight = Workout.new(
@@ -233,8 +254,7 @@ workout_eight = Workout.new(
 workout_eight.photo.attach(io: file8, filename: "yoga.jpg", content_type: "image/png")
 workout_eight.save!
 
-
-
+file9a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838342/Andreea%20instructor%209.jpg')
 instructor9 = Instructor.create(
   name: "Andreea",
   bio: "In her career, Andreea has assisted a wide range of clients in achieving everything from simple improvements in health to becoming the strongest, fittest version of themselves. Besides coaching, she used her knowledge and skills to win multiple medals in female bodybuilding and powerlifting competitions.",
@@ -243,6 +263,8 @@ instructor9 = Instructor.create(
   area_of_expertise: "Mobility & Conditioning",
   image: "jkkjk"
 )
+instructor9.photo.attach(io: file9a, filename: "yoga.jpg", content_type: "image/png")
+instructor9.save!
 
 file9 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693479314/mobility-1_iay8qn.jpg')
 workout_nine = Workout.new(
@@ -260,6 +282,7 @@ workout_nine = Workout.new(
 workout_nine.photo.attach(io: file9, filename: "yoga.jpg", content_type: "image/png")
 workout_nine.save!
 
+file10a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838424/Traci%20Instructor%2010.jpg')
 instructor10 = Instructor.create(
   name: "Traci",
   bio: "Traci was hooked after taking her first Spin class. Her love of this challenging workout led her to become an indoor cycling instructor and to eventually open her own studio. Traci's goal is to create an upbeat environment with a friendly staff that encourages positive thinking and positive results.",
@@ -268,6 +291,8 @@ instructor10 = Instructor.create(
   area_of_expertise: "Cardio, Cycling",
   image: "jkkjk"
 )
+instructor10.photo.attach(io: file10a, filename: "yoga.jpg", content_type: "image/png")
+instructor10.save!
 
 file10 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693480796/SETTING_UP_vuzdcf.webp')
 workout_ten = Workout.new(
@@ -287,6 +312,7 @@ workout_ten.save!
 
 puts "10 instructors and workouts created- woohoo halfway there"
 
+file11a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693838910/Matt%20instructor%2011.jpg')
 instructor11 = Instructor.create(
   name: "Matt",
   bio: "Matt previously worked at London Pierce College where he was responsible for the athletic development of 12 teams as the Head Strength and Conditioning Coach.",
@@ -295,6 +321,8 @@ instructor11 = Instructor.create(
   area_of_expertise: "Strength and Conditioning",
   image: "jkkjk"
 )
+instructor11.photo.attach(io: file11a, filename: "yoga.jpg", content_type: "image/png")
+instructor11.save!
 
 file11 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693481637/sa7yekhimgthwosryqhq_ww0gza.jpg')
 workout_eleven = Workout.new(
@@ -312,6 +340,7 @@ workout_eleven = Workout.new(
 workout_eleven.photo.attach(io: file11, filename: "yoga.jpg", content_type: "image/png")
 workout_eleven.save!
 
+file12a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693839363/Dana%20Instructor%2012.png')
 instructor12 = Instructor.create(
   name: "Dana",
   bio: "Dana has been a BC coach since 2005. She started as a whitewater kayaker and only got convinced to try SUP in 2018. She hasn’t done much kayaking since…",
@@ -320,6 +349,9 @@ instructor12 = Instructor.create(
   area_of_expertise: "SUP instructor",
   image: "jkkjk"
 )
+instructor12.photo.attach(io: file12a, filename: "yoga.jpg", content_type: "image/png")
+instructor12.save!
+
 
 file12 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693487746/Gallery_01_ooov4x.jpg')
 workout_twelve = Workout.new(
@@ -337,6 +369,7 @@ workout_twelve = Workout.new(
 workout_twelve.photo.attach(io: file12, filename: "yoga.jpg", content_type: "image/png")
 workout_twelve.save!
 
+file13a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693839564/Caoimhe%20Instructor%2013.jpg')
 instructor13 = Instructor.create(
   name: "Caoimhe",
   bio: "Caoimhe left behind a career as a City lawyer to set up Digme in 2015, when she was on maternity leave with her first son, Alex. Inspired by the quality of fantastic gym classes in the States, she set about writing a business plan to bring something similar to the UK while on holiday in France. ",
@@ -345,6 +378,9 @@ instructor13 = Instructor.create(
   area_of_expertise: "Running, yoga, mobility",
   image: "jkkjk"
 )
+instructor13.photo.attach(io: file13a, filename: "yoga.jpg", content_type: "image/png")
+instructor13.save!
+
 
 file13 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693489176/1628773387_Dep8k_Intro-800x500_jghrmn.jpg')
 workout_thirteen = Workout.new(
@@ -362,7 +398,7 @@ workout_thirteen = Workout.new(
 workout_thirteen.photo.attach(io: file13, filename: "yoga.jpg", content_type: "image/png")
 workout_thirteen.save!
 
-
+file14a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693839775/Juliette%20Instructor%2014.jpg')
 instructor14 = Instructor.create(
   name: "Juliette",
   bio: "Juliette has taught a variety of classes, for a broad range of participants, including teaching in Okinawa, Japan.  She teaches Boot Camp, Circuit, Cycle, Step, and Strength & Cardio. ",
@@ -371,6 +407,8 @@ instructor14 = Instructor.create(
   area_of_expertise: "Circuit, Cycle, Cardio",
   image: "jkkjk"
 )
+instructor14.photo.attach(io: file14a, filename: "yoga.jpg", content_type: "image/png")
+instructor14.save!
 
 file14 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693490361/Spin_2B3_qprgpx.jpg')
 workout_fourteen = Workout.new(
@@ -388,7 +426,7 @@ workout_fourteen = Workout.new(
 workout_fourteen.photo.attach(io: file14, filename: "yoga.jpg", content_type: "image/png")
 workout_fourteen.save!
 
-
+file15a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693839900/Luke%20Instructor%2015.jpg')
 instructor15 = Instructor.create(
   name: "Luke",
   bio: "I am quite a relaxed trainer, of course results are the main priority but I don't need to be Mr motivator to get the most out of you. I always make sure we get everything done that's planned for that session and I will always be honest about training and how I think your getting on.  ",
@@ -397,6 +435,9 @@ instructor15 = Instructor.create(
   area_of_expertise: "Booty strength",
   image: "jkkjk"
 )
+instructor15.photo.attach(io: file15a, filename: "yoga.jpg", content_type: "image/png")
+instructor15.save!
+
 
 file15 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693491307/unspecified-2_a576r6.jpg')
 workout_fifteen = Workout.new(
@@ -414,6 +455,7 @@ workout_fifteen = Workout.new(
 workout_fifteen.photo.attach(io: file15, filename: "yoga.jpg", content_type: "image/png")
 workout_fifteen.save!
 
+file16a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693840039/Brittany%20Instructor%2016.jpg')
 instructor16 = Instructor.create(
   name: "Brittany",
   bio: "Brittany is passionate about living without judgment and letting go of expectations. With a background in Clinical Psychology Brittany recognizes the role that yoga has in developing body awareness and enjoys the elements of the practice that aid mental clarity. ",
@@ -422,6 +464,8 @@ instructor16 = Instructor.create(
   area_of_expertise: "Vinyasa",
   image: "jkkjk"
 )
+instructor16.photo.attach(io: file16a, filename: "yoga.jpg", content_type: "image/png")
+instructor16.save!
 
 file16 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693492778/cfonkx7ngfqm7hwzsqek_jttrbe.jpg')
 workout_sixteen = Workout.new(
@@ -439,6 +483,7 @@ workout_sixteen = Workout.new(
 workout_sixteen.photo.attach(io: file16, filename: "yoga.jpg", content_type: "image/png")
 workout_sixteen.save!
 
+file17a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693840150/Vina%20Instructor%2017.jpg')
 instructor17 = Instructor.create(
   name: "Vina",
   bio: "Already holding extensive experience as a personal trainer and Pilates instructor, Vina completed a degree in Sports & Exercise Rehabilitation then qualified as an Athletic Therapist before taking on her Master’s in Osteopathy.",
@@ -447,6 +492,9 @@ instructor17 = Instructor.create(
   area_of_expertise: "Pilates",
   image: "jkkjk"
 )
+instructor17.photo.attach(io: file17a, filename: "yoga.jpg", content_type: "image/png")
+instructor17.save!
+
 
 file17 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693493822/Body-Machine-Performance-Studio-Kensington-London-TRX-Workout-Class-Core-Mobility_ryg8pe.jpg')
 workout_seventeen = Workout.new(
@@ -464,6 +512,7 @@ workout_seventeen = Workout.new(
 workout_seventeen.photo.attach(io: file17, filename: "yoga.jpg", content_type: "image/png")
 workout_seventeen.save!
 
+file18a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693840299/Jack%20Instructor%2018.jpg')
 instructor18 = Instructor.create(
   name: "Jack",
   bio: "Jack is part of the personal training team and one of the founders at our sister business, Fitness Lab. ",
@@ -472,6 +521,8 @@ instructor18 = Instructor.create(
   area_of_expertise: "Strength and conditioning",
   image: "jkkjk"
 )
+instructor18.photo.attach(io: file18a, filename: "yoga.jpg", content_type: "image/png")
+instructor18.save!
 
 file18 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693494818/Events_p5tyzw.jpg')
 workout_eighteen = Workout.new(
@@ -491,6 +542,7 @@ workout_eighteen.save!
 
 puts "18 done... two more to go...almost there yay"
 
+file19a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693840414/James%20Instructor%2019.jpg')
 instructor19 = Instructor.create(
   name: "James",
   bio: "James’ approach to training is founded upon his scientific background, implementing the latest research to achieve efficient, effective and safe results for your benefit.",
@@ -499,6 +551,8 @@ instructor19 = Instructor.create(
   area_of_expertise: "Strength and conditioning",
   image: "jkkjk"
 )
+instructor19.photo.attach(io: file19a, filename: "yoga.jpg", content_type: "image/png")
+instructor19.save!
 
 file19 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693497413/Image-207_8dafad3cdd0d49a5867f11edd61bcc13_bafyge.jpg')
 workout_nineteen = Workout.new(
@@ -516,6 +570,7 @@ workout_nineteen = Workout.new(
 workout_nineteen.photo.attach(io: file19, filename: "yoga.jpg", content_type: "image/png")
 workout_nineteen.save!
 
+file20a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693840553/Fabrizio%20Instructor%2020.jpg')
 instructor20 = Instructor.create(
   name: "Fabrizio",
   bio: "I'm a private personal trainer, and I've been working in the fitness industry for the last 8 years, mainly in the UK and Australia.",
@@ -524,6 +579,8 @@ instructor20 = Instructor.create(
   area_of_expertise: "Strength and cardio",
   image: "jkkjk"
 )
+instructor20.photo.attach(io: file20a, filename: "yoga.jpg", content_type: "image/png")
+instructor20.save!
 
 file20 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693498374/08_edited_zpnxji.jpg')
 workout_twenty = Workout.new(
