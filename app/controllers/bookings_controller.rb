@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
   def create
     @user = User.find(params[:id])
     @workout = Workout.find(params[:workout_id])
+    @booking = Booking.new(bookings_params)
+    @instructor = @workout.instructor
     @booking.workout = @workout
     @booking = Booking.new(bookings_params)
     @booking.user = current_user
