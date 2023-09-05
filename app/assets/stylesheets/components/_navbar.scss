@@ -2,7 +2,10 @@
   background-color: #444;
   bottom: 0;
   display: block;
-  width: 100vw;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  left: 0;
 }
 
 .nav-list {
@@ -13,10 +16,9 @@
   justify-content: space-around;
 }
 
-
 .nav-list li {
   display: inline-block;
-  font-size: 27px;
+  font-size: 30px;
 }
 
 .nav-list li a {
@@ -27,9 +29,4 @@
   display: flex;
   text-align: center;
   justify-content: center;
-}
-
-.avatar3 {
-  width:35px;
-  border-radius:50%;
 }
