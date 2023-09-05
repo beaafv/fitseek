@@ -1,4 +1,4 @@
-<div class="card bg-dark mb-2" style="height: 100vh;">
+<div class="card bg-dark mb-2" style="height: 81vh;">
   <div class="card-category-show"
         style="background-image:
         url('<%= cl_image_path @workout.photo.key %>'); color: #CEFE91;">
@@ -9,14 +9,15 @@
       <p><%= @workout.address %></p>
       <p class="card-text"><strong>Class:</strong><%= @workout.name %></p>
       <p class="card-text mb-4"> <strong>Class duration:</strong> <%=  @workout.duration%>h</p>
+       <p class="card-text mb-4">Price: $<%= @workout.cost %> FitSeek dollars</p>
       <p class="card-text mb-4"><%= @workout.description %></p>
       <p><%= link_to "See more about your instructor!", instructor_path(@instructor) %></p>
       <p style="color:green;">___________________________________________________</p>
         <div class="col-md-12 mt-2 mb-4">
-          <div class="d-contents justify-content-center">
+          <div class="d-contents justify-content-center" data-controller="toggle">
               <%= simple_form_for [@workout, @booking] do |f| %>
                 <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }%>
-                <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton" %>
+                <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton", data: {action: "click->toggle#alert"} %>
               <% end %>
           </div>
         </div>

@@ -18,4 +18,8 @@ export default class extends Controller {
     this.div2Target.classList.toggle("d-none");
     this.div1Target.classList.add("d-none");
  }
+
+ alert () {
+ alert("You don't have enough fitseek dollars! Go to your profile to buy more $$$ ");
+ }
 }

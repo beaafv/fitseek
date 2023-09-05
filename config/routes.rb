@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   get '/profile', to: "pages#profile", as: :profile
   get '/dashboard', to: "pages#dashboard", as: :dashboard
   get '/test', to: "pages#test", as: :test
-
+  get '/fitseek_info', to: "pages#fitseek_info", as: :fitseek
 end
