@@ -3,15 +3,14 @@
 <%= @user.first_name %><%= @user.last_name %>
 <%= render "shared/cardsdashboard", user: @user %>
 <% end %>
-<%= render "shared/navbar" %>
 
 
 
 <div class="container d-flex yello mt-3", data-controller="toggle">
   <div>
-    <h4 data-action="click->toggle#functiontoggle">Upcoming classes</h4>
-      <div class="d-none", data-toggle-target="div1">
-        <div class="container" style= "width:auto; height:auto";>
+    <h4 data-action="click->toggle#functiontoggle" class="paragrafo">Upcoming classes</h4>
+      <div data-toggle-target="div1">
+        <div class="container">
           <% @bookings.each do |booking| %>
         <div style="background-color: #2A2A2A;">
             <div class="notification-content m-2">
@@ -29,19 +28,17 @@
     <% end %>
   </div>
 </div>
-
-    <div class="space", style= "width:50px">
-    </div>
+<div>
       <div>
-       <h4 data-action="click->toggle#functiontoggle2"> Past classes</h4>
-        <div class="d-none", data-toggle-target="div2">
-          <div class="container p-4" mb-4  style= "width:100vw; height:100vh";>
+       <h4 data-action="click->toggle#functiontoggle2" class="paragrafo"> Past classes</h4>
+        <div data-toggle-target="div2">
+          <div class="container">
             <div style="background-color: #2A2A2A;">
                 <div class="notification-content m-2">
                   <div class="m-2">
                   <h4 class= "text-white mt-1"> Yoga</h4>
                   <p>Mobility</p>
-                  <p>15/11/2023</p>
+                  <p>26/08/2023</p>
                   <p>Rua do conde Redondo</p>
                 </div>
               </div>
@@ -50,3 +47,6 @@
         </div>
       </div>
     </div>
+</div>
+
+<%= render "shared/navbar" %>
