@@ -1,4 +1,4 @@
-<div class= "justify-content-center mb-4">
+<div class= "workout-container justify-content-center mb-4">
 
 <div class="header-div">
     <h3 class= "text-white text-center">Browse all workouts:</h3>
@@ -11,8 +11,10 @@
       <h2 class="mt-2"><%= workout.name %></h2>
       <p><%= workout.category %></p>
       <p><%= workout.available_class_times %></p>
+      <p>Price: $FS <%= workout.cost %></p>
       </div>
     </div>
      <% end %>
   <% end %>
 </div>
+<div style="margin-top:8vh;"></div>

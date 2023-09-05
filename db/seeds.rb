@@ -14,10 +14,26 @@ user1 = User.create(
   last_name: "Figueiredo",
   bio: "Really cool",
   birthdate: "20/01/2020",
-  favourite_activities: "surfing"
+  favourite_activities: "surfing",
+
 )
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
+
+
+pic2 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693926649/maria.jpg')
+user2 = User.create(
+  email: "maariyaah@gmail.com",
+  password: "123456",
+  first_name: "Maariyaah",
+  last_name: "Figueiredo",
+  bio: "I love rock climbing!",
+  birthdate: "20/01/2020",
+  favourite_activities: "rock climbing obv"
+
+)
+user2.photo.attach(io: pic2, filename: "maria.jpg", content_type: "image/png")
+user2.save!
 
 puts "creating instructor"
 file1a = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693837769/Jos%C3%A9%20-%20Instructor%201.jpg')
@@ -44,7 +60,8 @@ workout_one = Workout.new(
   available_class_times: "19",
   duration: 1,
   contact: "916337934",
-  instructor: instructor1
+  instructor: instructor1,
+  cost: 200
 )
 workout_one.photo.attach(io: file, filename: "yoga.jpg", content_type: "image/png")
 workout_one.save!
@@ -73,7 +90,8 @@ workout_two = Workout.new(
   available_class_times: "20",
   duration: 1,
   contact: "916337934",
-  instructor: instructor2
+  instructor: instructor2,
+  cost: 200
 )
 workout_two.photo.attach(io: file2, filename: "yoga.jpg", content_type: "image/png")
 workout_two.save!
@@ -105,7 +123,8 @@ workout_three = Workout.new(
   available_class_times: "10",
   duration: 1,
   contact: "916337934",
-  instructor: instructor3
+  instructor: instructor3,
+  cost: 200
 )
 workout_three.photo.attach(io: file3, filename: "yoga.jpg", content_type: "image/png")
 workout_three.save!
@@ -133,7 +152,8 @@ workout_four = Workout.new(
   available_class_times: "14",
   duration: 1,
   contact: "916337934",
-  instructor: instructor4
+  instructor: instructor4,
+  cost: 200
 )
 workout_four.photo.attach(io: file4, filename: "yoga.jpg", content_type: "image/png")
 workout_four.save!
@@ -161,7 +181,8 @@ workout_five = Workout.new(
   available_class_times: "19",
   duration: 1,
   contact: "808175556",
-  instructor: instructor5
+  instructor: instructor5,
+  cost: 200
 )
 workout_five.photo.attach(io: file5, filename: "yoga.jpg", content_type: "image/png")
 workout_five.save!
@@ -191,7 +212,8 @@ workout_six = Workout.new(
   available_class_times: "17",
   duration: 1,
   contact: "807175556",
-  instructor: instructor6
+  instructor: instructor6,
+  cost: 200
 )
 workout_six.photo.attach(io: file6, filename: "yoga.jpg", content_type: "image/png")
 workout_six.save!
@@ -219,7 +241,8 @@ workout_seven = Workout.new(
   available_class_times: "18",
   duration: 1,
   contact: "897175444",
-  instructor: instructor7
+  instructor: instructor7,
+  cost: 200
 )
 workout_seven.photo.attach(io: file7, filename: "yoga.jpg", content_type: "image/png")
 workout_seven.save!
@@ -248,7 +271,8 @@ workout_eight = Workout.new(
   available_class_times: "17",
   duration: 1,
   contact: "877156444",
-  instructor: instructor8
+  instructor: instructor8,
+  cost: 200
 )
 workout_eight.photo.attach(io: file8, filename: "yoga.jpg", content_type: "image/png")
 workout_eight.save!
@@ -276,7 +300,8 @@ workout_nine = Workout.new(
   available_class_times: "21",
   duration: 1,
   contact: "809156454",
-  instructor: instructor9
+  instructor: instructor9,
+  cost: 200
 )
 workout_nine.photo.attach(io: file9, filename: "yoga.jpg", content_type: "image/png")
 workout_nine.save!
@@ -304,7 +329,8 @@ workout_ten = Workout.new(
   available_class_times: "19",
   duration: 1,
   contact: "819156754",
-  instructor: instructor10
+  instructor: instructor10,
+  cost: 200
 )
 workout_ten.photo.attach(io: file10, filename: "yoga.jpg", content_type: "image/png")
 workout_ten.save!
@@ -334,7 +360,8 @@ workout_eleven = Workout.new(
   available_class_times: "15",
   duration: 1,
   contact: "824156754",
-  instructor: instructor11
+  instructor: instructor11,
+  cost: 200
 )
 workout_eleven.photo.attach(io: file11, filename: "yoga.jpg", content_type: "image/png")
 workout_eleven.save!
@@ -363,7 +390,8 @@ workout_twelve = Workout.new(
   available_class_times: "14",
   duration: 1,
   contact: "833356754",
-  instructor: instructor12
+  instructor: instructor12,
+  cost: 200
 )
 workout_twelve.photo.attach(io: file12, filename: "yoga.jpg", content_type: "image/png")
 workout_twelve.save!
@@ -392,7 +420,8 @@ workout_thirteen = Workout.new(
   available_class_times: "14",
   duration: 1,
   contact: "893356731",
-  instructor: instructor13
+  instructor: instructor13,
+  cost: 200
 )
 workout_thirteen.photo.attach(io: file13, filename: "yoga.jpg", content_type: "image/png")
 workout_thirteen.save!
@@ -420,7 +449,8 @@ workout_fourteen = Workout.new(
   available_class_times: "21",
   duration: 1,
   contact: "883355131",
-  instructor: instructor14
+  instructor: instructor14,
+  cost: 200
 )
 workout_fourteen.photo.attach(io: file14, filename: "yoga.jpg", content_type: "image/png")
 workout_fourteen.save!
@@ -449,7 +479,8 @@ workout_fifteen = Workout.new(
   available_class_times: "17",
   duration: 1,
   contact: "827355131",
-  instructor: instructor15
+  instructor: instructor15,
+  cost: 200
 )
 workout_fifteen.photo.attach(io: file15, filename: "yoga.jpg", content_type: "image/png")
 workout_fifteen.save!
@@ -477,7 +508,8 @@ workout_sixteen = Workout.new(
   available_class_times: "17",
   duration: 1,
   contact: "827355131",
-  instructor: instructor16
+  instructor: instructor16,
+  cost: 200
 )
 workout_sixteen.photo.attach(io: file16, filename: "yoga.jpg", content_type: "image/png")
 workout_sixteen.save!
@@ -506,7 +538,8 @@ workout_seventeen = Workout.new(
   available_class_times: "13",
   duration: 1,
   contact: "827355131",
-  instructor: instructor17
+  instructor: instructor17,
+  cost: 200
 )
 workout_seventeen.photo.attach(io: file17, filename: "yoga.jpg", content_type: "image/png")
 workout_seventeen.save!
@@ -534,7 +567,8 @@ workout_eighteen = Workout.new(
   available_class_times: "18",
   duration: 1,
   contact: "829355132",
-  instructor: instructor18
+  instructor: instructor18,
+  cost: 200
 )
 workout_eighteen.photo.attach(io: file18, filename: "yoga.jpg", content_type: "image/png")
 workout_eighteen.save!
@@ -564,7 +598,8 @@ workout_nineteen = Workout.new(
   available_class_times: "17",
   duration: 1,
   contact: "829355132",
-  instructor: instructor19
+  instructor: instructor19,
+  cost: 200
 )
 workout_nineteen.photo.attach(io: file19, filename: "yoga.jpg", content_type: "image/png")
 workout_nineteen.save!
@@ -592,7 +627,8 @@ workout_twenty = Workout.new(
   available_class_times: "16",
   duration: 1,
   contact: "879355175",
-  instructor: instructor20
+  instructor: instructor20,
+  cost: 200
 )
 workout_twenty.photo.attach(io: file20, filename: "yoga.jpg", content_type: "image/png")
 workout_twenty.save!

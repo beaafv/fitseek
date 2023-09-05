@@ -61,6 +61,7 @@ class WorkoutsController < ApplicationController
     # @booking = Booking.new(bookings_params)
 
     # if @booking.save
+
     #   redirect_to dashboard_path, notice: 'Booking saved!'
     # else
     #   render "workouts/show", status: :unprocessable_entity
