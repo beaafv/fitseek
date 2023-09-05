@@ -1,17 +1,14 @@
 <nav class="top-navbar">
- <ul class="nav-list d-flex">
+  <ul class="nav-list d-flex">
     <div class="back-button" >
-      <%= link_to " ", :back, class:"fa-solid fa-chevron-left", style:"color:white"%>
+      <%= link_to "", :back, class:"fa-solid fa-chevron-left", style:"color:white"%>
     </div>
-    <div class="space", style= "width:115px">
-    </div>
-    <%= link_to workouts_path do %>
-    <%= image_tag 'fs.png', class: "avatar logoclass2 d-flex justify-content-center" %>
+    <%= link_to workouts_path, class: "text-decoration-none d-block" do %>
+      <%= image_tag 'newfitseeklogo.png', class: "avatar-navbar logoclass2 d-flex justify-content-center" %>
     <% end %>
-     </div>
-    <div class="space", style= "width:120px">
-    </div>
+
     <div class="notification mt-3">
+
     <%= image_tag 'lol', class: "avatar3 logoclass2 d-flex justify-content-center" %>
     </div>
   </ul>
