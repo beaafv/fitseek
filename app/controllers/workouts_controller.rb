@@ -55,16 +55,16 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @bookings = Booking.all
-    @user.booking = current_user
-    @workout = Workout.find(params[:workout_id])
-    @booking = Booking.new(bookings_params)
+    # @bookings = Booking.all
+    # @user.booking = current_user
+    # @workout = Workout.find(params[:workout_id])
+    # @booking = Booking.new(bookings_params)
 
-    if @booking.save
-      redirect_to dashboard_path, notice: 'Booking saved!'
-    else
-      render "workouts/show", status: :unprocessable_entity
-    end
+    # if @booking.save
+    #   redirect_to dashboard_path, notice: 'Booking saved!'
+    # else
+    #   render "workouts/show", status: :unprocessable_entity
+    # end
   end
 
   def mobility
