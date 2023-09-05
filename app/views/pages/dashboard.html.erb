@@ -19,6 +19,7 @@
               <p><%= booking.workout.category %></p>
               <p><%= booking.date %></p>
               <p><%= booking.workout.address %></p>
+              <%= @user.fsdollars %>
               <%= link_to 'Cancel class', booking_path(booking), data: { "turbo-method": :delete } %>
 
               </div>

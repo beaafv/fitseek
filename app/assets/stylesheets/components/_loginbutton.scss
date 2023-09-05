@@ -1,5 +1,5 @@
 .loginbutton {
-  background-color: #D8FD9E;
+  background-color: #CEFE91;
   color: black;
   padding: 14px 20px;
   margin: 8px 0;
@@ -10,9 +10,12 @@
   text-decoration: none;
   text-align: center;
   margin-bottom: 50px;
+  opacity: 80%;
+  cursor: pointer;
 }
 
 .loginbutton:hover {
+  opacity: 100%;
   text-decoration: none;
-  color: #999999;
-}
+  color: black;
+box-shadow: 2px 2px rgb(66, 223, 71);}
