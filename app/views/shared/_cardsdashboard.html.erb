@@ -9,7 +9,13 @@
 </div>
 
         <div class="card-profile2 d-flex">
-        <i class="fa-solid fa-trophy icon-profile2"></i>
-        <div class="space", style="width:10px"></div>
-        <div class="card-profile-body2 ">Congratulations on your 5th class!</div>
-        </div>
+            <div class="space", style="width:10px"></div>
+              <%if @user.fsdollars > 0 %>
+              <i class="fa-solid fa-trophy icon-profile2"></i>
+              <div class="card-profile-body2 ">Congratulations <div>on your $<%= @user.fsdollars %> FitSeek dollars!</div></div>
+              <% else %>
+              <i class="fa-solid fa-face-sad-tear" style="color: #00000;"></i>
+              <div class="card-profile-body2 "> <div>Your balance is $<%= @user.fsdollars %> ...</div></div>
+              <div class="card-profile-body2 "><%= @user.first_name %>, go and buy some FitSeek dollars!</div></div>
+              <% end %>
+         </div>
