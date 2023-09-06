@@ -5,31 +5,36 @@
     <i class="fa-solid fa-chevron-right chevron-profile ms-auto"></i>
   </div>
   <br>
+    <%= link_to workouts_path, class:"decoration-none d-block" do %>
   <div class="card-profile">
     <i class="fa-regular fa-calendar icon-profile"></i>
     <div class="card-profile-body">Classes</div>
     <i class="fa-solid fa-chevron-right chevron-profile ms-auto"></i>
   </div>
   <br>
+    <% end  %>
   <div class="card-profile">
     <i class="fa-regular fa-heart icon-profile"></i>
     <div class="card-profile-body">Favourites</div>
     <i class="fa-solid fa-chevron-right chevron-profile ms-auto"></i>
     </div>
   <br>
+   <%= link_to instructors_path, class:"decoration-none d-block" do %>
   <div class="card-profile">
-    <i class="fa-solid fa-user-group icon-profile"></i>
-    <div class="card-profile-body">Friends</div>
+    <i class="fa-solid fa-person-chalkboard"></i>
+    <div class="card-profile-body">Instructors</div>
     <i class="fa-solid fa-chevron-right chevron-profile ms-auto"></i>
     </div>
   <br>
+  <% end %>
+  <%= link_to fitseek_path, class:"decoration-none d-block" do %>
   <div class="card-profile">
     <i class="fa-solid fa-trophy icon-profile"></i>
     <div class="card-profile-body">Fit Seek Dollars</div>
     <i class="fa-solid fa-chevron-right chevron-profile ms-auto"></i>
 </div>
   <br>
-
+    <% end %>
   <div class="card-profile">
     <i class="fa-solid fa-arrow-right-from-bracket"></i>
     <div class="card-profile-body"> <%= link_to "Sign Out", destroy_user_session_path, data: {"turbo-method": :delete}, style:"text-decoration:none:"%></div>
