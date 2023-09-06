@@ -1,14 +1,14 @@
 <div class= "workout-container justify-content-center mb-4">
 
 <div class="header-div">
-    <h3 class= "text-white text-center">Browse all workouts:</h3>
+    <h3 class= "text-white text-center mb-4">Browse all workouts:</h3>
 </div>
   <% @workouts.each do |workout| %>
   <%=link_to workout_path(workout) do %>
     <div class="card-product mb-4">
       <img class="allworkoutsimage"src="<%= cl_image_path workout.photo.key %>" />
     <div class="card-product-infos">
-      <h2 class="mt-2"><%= workout.name %></h2>
+      <h2><%= workout.name %></h2>
       <p><%= workout.category %></p>
       <p><%= workout.available_class_times %></p>
       <p>Price: $FS <%= workout.cost %></p>

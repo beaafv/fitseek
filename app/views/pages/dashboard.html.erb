@@ -6,47 +6,40 @@
 
 
 
-<div class="container d-flex yello mt-3", data-controller="toggle">
+<div class="justify-content-center mb-4", data-controller="toggle">
   <div>
-    <h4 data-action="click->toggle#functiontoggle" class="paragrafo">Upcoming classes</h4>
-      <div data-toggle-target="div1">
-        <div class="container">
-          <% @bookings.each do |booking| %>
-        <div style="background-color: #2A2A2A;">
-            <div class="notification-content m-2">
-            <div class="m-2">
-              <h4 class= "text-white mt-1"> <%= booking.workout.name %></h4>
-              <p><%= booking.workout.category %></p>
-              <p><%= booking.date %></p>
-              <p><%= booking.workout.address %></p>
-              <%= link_to 'Cancel class', booking_path(booking), data: { "turbo-method": :delete } %>
+    <h4 data-action="click->toggle#functiontoggle" class="paragrafo m-3">Upcoming classes</h4>
+        <% @bookings.each do |booking| %>
+        <div class="card-product mb-4", data-toggle-target="div1">
 
-              </div>
-            </div>
-          </div>
+
+                <div class="mt-2 p-3">
+                  <h4 class= "text-white mt-1"> <%= booking.workout.name %></h4>
+                    <p><%= booking.workout.category %></p>
+                    <p><%= booking.date %></p>
+                    <p><%= booking.workout.address %></p>
+                    <%= link_to 'Cancel class', booking_path(booking), data: { "turbo-method": :delete } %>
+                </div>
+
+          <% end %>
       </div>
-    <% end %>
   </div>
 </div>
-<div>
-      <div>
-       <h4 data-action="click->toggle#functiontoggle2" class="paragrafo"> Past classes</h4>
-        <div data-toggle-target="div2">
-          <div class="container">
-            <div style="background-color: #2A2A2A;">
-                <div class="notification-content m-2">
-                  <div class="m-2">
-                  <h4 class= "text-white mt-1"> Yoga</h4>
-                  <p>Mobility</p>
-                  <p>26/08/2023</p>
-                  <p>Rua do conde Redondo</p>
-                </div>
+
+
+<div data-controller="toggle">
+    <div>
+       <h4 data-action="click->toggle#functiontoggle2" class="paragrafo m-3"> Past classes</h4>
+        <div class="card-product mb-4" data-toggle-target="div2" >
+            <div class="m-2">
+               <h4 class= "text-white mt-1"> Yoga</h4>
+                <p>Mobility</p>
+                <p>26/08/2023</p>
+                <p>Rua do conde Redondo</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+
 </div>
 
 <%= render "shared/navbar" %>
