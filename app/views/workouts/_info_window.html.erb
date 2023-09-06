@@ -1,4 +1,8 @@
 <div class="container rounded" style="border-radius:10px;">
+  <p><a style="font-size:16px; color:black;"href='https://www.google.com/maps?ll=<%=@workout.latitude%>,<%=@workout.longitude%>'target="_blank"> <i class="fa-solid fa-map-pin" style="color: #63dd5a;"></i> Google Maps</a></p>
+  <p><a style="font-size:16px; color:black;"href='https://waze.com/ul?ll=<%=@workout.latitude%>,<%=@workout.longitude%>&navigate=yes'target="_blank"> <i class="fa-brands fa-waze" style="color: #3fceff;"></i> Waze</a>
+</p>
   <p class="text-dark" style="font-size:20px;"><b><%= @workout.name %></b></p>
-  <p class="text-dark">Address: <%= @workout.address %></p>
 </div>
+
+
