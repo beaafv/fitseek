@@ -41,6 +41,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @workout = Workout.find(params[:id])
     @booking = Booking.new
     @instructors = Instructor.all
