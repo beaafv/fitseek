@@ -2,7 +2,7 @@
 <%= render "shared/searchbar" %>
 
 
-<div class="container d-flex  vh-100 justify-content-center body-home">
+<div class="container d-flex  vh-250 justify-content-center body-home">
   <div class="row justify-content-between align-items-center bg-dark m-4">
   <div class="d-flex p-4" style="gap:20px; flex-direction:column;">
 
@@ -15,8 +15,7 @@
     <p class="text-center"> <%= @instructor.bio %></p>
     <p class="text-center"> years of experience: <%= @instructor.years_experience %></p>
    <div class="container", data-controller="toggle">
-<a class="flip btn btn-green form-control mt-3", data-action="click->toggle#functiontoggle">See <%= @instructor.name %>'s classes</a>
-<div class= "d-none", data-toggle-target="div1">
+<a class="flip loginbutton form-control mt-3", data-action="click->toggle#functiontoggle">See <%= @instructor.name %>'s classes</a>
 <% @workouts.each do |workout|%>
   <div class="mt-4">
     <%= render "shared/instructorsworkout" %>
