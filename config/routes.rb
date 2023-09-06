@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: "pages#dashboard", as: :dashboard
   get '/test', to: "pages#test", as: :test
   get '/fitseek_info', to: "pages#fitseek_info", as: :fitseek
+  get '/refer_to_a_friend', to: "pages#refer_to_a_friend", as: :refertoafriend
 end

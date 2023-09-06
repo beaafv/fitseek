@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def fitseek_info
     @user = current_user
   end
+
+  def refer_to_a_friend
+  end
 end
