@@ -21,9 +21,11 @@ class WorkoutsController < ApplicationController
   end
 
   def all
-    @workouts = Workout.all
+    @user = current_user
+    good_workouts = Workout.where(category: @user.favourite_activities)
+    bad_workouts = Workout.where.not(category: @user.favourite_activities)
+    @workouts = good_workouts + bad_workouts
     @workout = Workout.find_by(params[:id])
-
 
     @instructors = Instructor.all
     @instructor = Instructor.find_by(params[:id])
