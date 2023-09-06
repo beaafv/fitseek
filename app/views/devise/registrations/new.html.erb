@@ -25,8 +25,10 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :birthdate,
+       <%= f.input :birthdate,
                     required: true,
+                    start_year: Time.now.year - 100,
+                    end_year: Time.now.year - 18,
                     input_html: { autocomplete: "birthdate" } %>
         <%= f.input :favourite_activities,
                     required: true,
@@ -36,6 +38,7 @@
                     input_html: { autocomplete: "bio" } %>
          <%= f.input :photo, as: :file %>
       </div>
+
 
       <div class="form-actions btn btn-green form-control p-1">
         <%= f.button :submit, "Sign up", style:"font-weight:bold;" %>
