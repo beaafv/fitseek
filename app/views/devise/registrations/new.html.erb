@@ -30,9 +30,7 @@
                     start_year: Time.now.year - 100,
                     end_year: Time.now.year - 18,
                     input_html: { autocomplete: "birthdate" } %>
-        <%= f.input :favourite_activities,
-                    required: true,
-                    input_html: { autocomplete: "favourite activities" } %>
+        <%= f.input :favourite_activities, :collection => %w[Mobility Outdoors Cardio Strength] %>
         <%= f.input :bio,
                     required: true,
                     input_html: { autocomplete: "bio" } %>

@@ -11,8 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.workout = @workout
 
-
-    if ( @workout.cost <@user.fsdollars) || ( @workout.cost == @user.fsdollars ) && @booking.save
+    if (@workout.cost < @user.fsdollars) || ((@workout.cost == @user.fsdollars) && @booking.save)
       @user.fsdollars -= @workout.cost
       @user.fsdollars += 10
       @user.fsdollars

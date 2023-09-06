@@ -14,22 +14,21 @@ user1 = User.create(
   last_name: "Figueiredo",
   bio: "Really cool",
   birthdate: "20/01/2020",
-  favourite_activities: "surfing",
-
+  favourite_activities: "Outdoors"
 )
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
 
 
-pic2 = URI.open('https://res.cloudinary.com/dxt5xabdb/image/upload/v1693926649/maria.jpg')
+pic2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693990046/IMG_7870_mxrenk.jpg')
 user2 = User.create(
   email: "maariyaah@gmail.com",
   password: "123456",
   first_name: "Maariyaah",
-  last_name: "Figueiredo",
-  bio: "I love rock climbing!",
+  last_name: "Afzal",
+  bio: "FitSeek is my life",
   birthdate: "20/01/2020",
-  favourite_activities: "rock climbing obv"
+  favourite_activities: "Mobility"
 
 )
 user2.photo.attach(io: pic2, filename: "maria.jpg", content_type: "image/png")
