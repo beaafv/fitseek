@@ -5,9 +5,7 @@
   align-items: center;
   color: #CEFE91;
   background-color: #000000;
-  position: relative;
-  height: 10vh;
-  margin-top: -25px;
+  height: 13vh;
   border-radius: 5px;
 }
 
@@ -17,8 +15,7 @@
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #CEFE91;
-  position: absolute;
-  top: -17px;
+
 }
 
 .card-trip .card-trip-infos {
@@ -26,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
+
 }
 
 .card-profile2 {
@@ -55,9 +52,7 @@
   align-items: center;
   color: #CEFE91;
   background-color: #545454;
-  position: relative;
   height: auto;
-  margin-top: -25px;
   border-radius: 5px;
 }
 .card-profile-body2 {
