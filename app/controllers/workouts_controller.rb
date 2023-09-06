@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
         OR workouts.subcategory ILIKE :query
         OR instructors.name ILIKE :query
       SQL
-      @workouts = @workouts.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
+      @workouts = Workout.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
 
@@ -36,7 +36,7 @@ class WorkoutsController < ApplicationController
         OR workouts.subcategory ILIKE :query
         OR instructors.name ILIKE :query
       SQL
-      @workouts = @workouts.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
+      @workouts = Workout.joins(:instructor).where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
 
