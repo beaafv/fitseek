@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :all]
   def index
     @workouts = Workout.all
     @workout = Workout.find_by(params[:id])
@@ -47,6 +48,7 @@ class WorkoutsController < ApplicationController
     @instructors = Instructor.all
     @instructor = Instructor.find(params[:id])
     @workouts = Workout.all
+    @location = @workout.address
     @markers = [
       {
         lat: @workout.latitude,

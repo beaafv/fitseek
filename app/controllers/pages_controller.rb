@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:home]
+  before_action :authenticate_user!, except: [:home, :test, :refer_to_a_friend]
 
   def home
   end

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @bookings = Booking.all
   end
@@ -34,7 +35,6 @@ class BookingsController < ApplicationController
       @user.fsdollars -= 10
       @user.save
     end
-
   end
 
   private
