@@ -19,7 +19,6 @@ user1 = User.create(
 user1.photo.attach(io: pic1, filename: "miguel.jpg", content_type: "image/png")
 user1.save!
 
-
 pic2 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693990046/IMG_7870_mxrenk.jpg')
 user2 = User.create(
   email: "maariyaah@gmail.com",
@@ -54,7 +53,7 @@ workout_one = Workout.new(
   category: "Mobility",
   subcategory: "Yoga",
   description: "Unwind after a long day with a soothing Ashtanga Yoga class designed to relax and destress.",
-  address: "The Light Centre Monument, 36 St Mary at Hill, London EC3R 8DU, United Kingdom",
+  address: "36 St Mary at Hill, London EC3R 8DU, United Kingdom",
   image: "hkkhk",
   available_class_times: "19",
   duration: 1,
@@ -117,7 +116,7 @@ workout_three = Workout.new(
   category: "Strength",
   subcategory: "Boxing",
   description: "Rumble is group fitness for the individual, and we believe that working out should be fun and effective. Rumble Boxing is an all-level, 45-minute boxing and strength training workout powered by a mega-watt sound system and custom playlists available only at Rumble. 10 rounds, 2 fists, 0 experience necessary.",
-  address: "16 Eccleston YardsEccleston Place, London SW1W 9NF, London, SW1W 9NF",
+  address: "16 Eccleston Yards, Eccleston Place, London SW1W 9NF, London, SW1W 9NF",
   image: "x",
   available_class_times: "10",
   duration: 1,
@@ -354,7 +353,7 @@ workout_eleven = Workout.new(
   category: "Strength",
   subcategory: "Group workouts",
   description: "Barry’s is a 50 - 60 minute cardio and strength-building workout designed to help your body burn up to 1,000 calories thanks to their carefully crafted program that is as effective as it is fun.",
-  address: "16 Eccleston YardsEccleston Place, London SW1W 9NF, London, SW1W 9NF",
+  address: "16 Eccleston Yards, Eccleston Place, London SW1W 9NF, London, SW1W 9NF",
   image: "x",
   available_class_times: "15",
   duration: 1,
@@ -384,7 +383,7 @@ workout_twelve = Workout.new(
   category: "Outdoors",
   subcategory: "Group workouts",
   description: "You can learn paddleboarding skills and how to use the Thames Tideway safely. We run a comprehensive programme at this base throughout the year. ",
-  address: "Brentford Boating Arch Kew Bridge Arches Strand on the Green London, W4 3NG",
+  address: "Kew Bridge Arches Strand on the Green London, W4 3NG",
   image: "x",
   available_class_times: "14",
   duration: 1,
@@ -414,7 +413,7 @@ workout_thirteen = Workout.new(
   category: "Mobility",
   subcategory: "Group workouts",
   description: "Simply the best and friendliest fitness studios in the City of London. With all of our CYCLE, HIIT, STRENGTH, YOGA and BARRE sessions, we've got something for you.",
-  address: "Digme Bank 40 Coleman Street London EC2R 5EH",
+  address: "40 Coleman Street London EC2R 5EH",
   image: "x",
   available_class_times: "14",
   duration: 1,
@@ -502,7 +501,7 @@ workout_sixteen = Workout.new(
   category: "Outdoors",
   subcategory: "Group workouts",
   description: "Forget everything you know about fitness studios, the revolution is here. Studio Society is an immersive gym combining sight, sound, smell and innovative classes to bring you the most effective, stimulating and compelling group exercise experience on the market.",
-  address: "37 Fortune Green RoadWest Hampstead, London, NW6 1DR",
+  address: "37 Fortune Green Road, West Hampstead, London, NW6 1DR",
   image: "x",
   available_class_times: "17",
   duration: 1,
@@ -621,7 +620,7 @@ workout_twenty = Workout.new(
   category: "Outdoors",
   subcategory: "Group workouts",
   description: "Our Outdoors fitness classes in Hyde Park combine three simple ingredients; dedicated members, THE BEST instructors AND central Londons greatest gym, Hyde Park.",
-  address: "63-66 Hatton Garden 5th Floor, Suite 23,London EC1N 8LE",
+  address: "63 Hatton Garden, London EC1N 8LE",
   image: "x",
   available_class_times: "16",
   duration: 1,

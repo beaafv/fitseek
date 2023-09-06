@@ -16,8 +16,13 @@
                 <p><%= link_to "See more about your instructor!", instructor_path(@instructor) %></p>
                 <div data-controller="toggle" class="container d-flex justify-content-center">
                   <%= simple_form_for [@workout, @booking] do |f| %>
-                    <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
-                    <%= f.button :submit, "Book Now!", class:"btn loginbutton text-center mt-2", data: {action: "click->toggle#alert"} %>
+                    <% if (@workout.cost > @user.fsdollars) %>
+                      <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
+                      <%= f.button :submit, "Book Now!", class:"btn loginbutton text-center mt-2", data: {action: "click->toggle#alert"} %>
+                    <% else %>
+                      <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
+                      <%= f.button :submit, "Book Now!", class:"btn loginbutton text-center mt-2" %>
+                      <% end %>
                   <% end %>
               </div>
 
