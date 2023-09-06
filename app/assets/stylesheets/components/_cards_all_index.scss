@@ -1,15 +1,19 @@
 .card-product {
   overflow: hidden;
-  height: 20vh;
-  background: rgb(40, 39, 39);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 25vh;
+  background: #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
-  margin:auto;
+  margin: auto;
+  border: burlywood;
   width: 90vw;
+  box-sizing: border-box;
+  border-color: white;
+  border-style: solid;
 }
 
 .header-div {
@@ -34,13 +38,13 @@ width: 40vw;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 10;

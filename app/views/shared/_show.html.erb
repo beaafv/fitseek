@@ -1,33 +1,30 @@
-<div class="card bg-dark mb-2" style="height: 100vh;">
-  <div class="card-category-show"
-        style="background-image:
-        url('<%= cl_image_path @workout.photo.key %>'); color: #CEFE91;">
-        <%= @workout.name %> with <%= @workout.instructor.name  %>
-  </div>
-
-  <div class="card-body2">
-      <p><%= @workout.address %></p>
-      <p class="card-text"><strong>Class:</strong><%= @workout.name %></p>
-      <p class="card-text mb-4"> <strong>Class duration:</strong> <%=  @workout.duration%>h</p>
-       <p class="card-text mb-4">Price: $<%= @workout.cost %> FitSeek dollars</p>
-      <p class="card-text mb-4"><%= @workout.description %></p>
-      <p><%= link_to "See more about your instructor!", instructor_path(@instructor) %></p>
-      <p style="color:green;">___________________________________________________</p>
-        <div class="col-md-12 mt-2 mb-4">
-          <div class="d-contents justify-content-center" data-controller="toggle">
-              <%= simple_form_for [@workout, @booking] do |f| %>
-                <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }%>
-                <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton", data: {action: "click->toggle#alert"} %>
-              <% end %>
+<div class="container d-flex  vh-100 justify-content-center body-home">
+    <div class="row justify-content-center m-4">
+      <div class="d-flex" style="gap:20px; flex-direction:column;">
+        <div class="col md-6">
+          <div class="row justify-content-between align-items-center">
+            <div class="d-flex p-4 vw-100" style="gap:20px; flex-direction:column;">
+              <div class="bg-dark m-4 p-4">
+                <p><%= @workout.address %></p>
+                <p><strong>Class:</strong><%= @workout.name %></p>
+                <p> <strong>Class duration:</strong> <%=  @workout.duration%>h</p>
+                <p>Price: $<%= @workout.cost %> FitSeek dollars</p>
+                <p><%= @workout.description %></p>
+                <p><%= link_to "See more about your instructor!", instructor_path(@instructor) %></p>
+                <div data-controller="toggle">
+                  <%= simple_form_for [@workout, @booking] do |f| %>
+                    <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }%>
+                    <%= f.button :submit, "Book #{@workout.name}", class:"btn loginbutton", data: {action: "submit->toggle#alert"} %>
+                  <% end %>
+              </div>
+                <div class="mt-4"style="height: 30vh; margin-top: 50px;"
+                        data-controller="map"
+                        data-map-markers-value="<%= @markers.to_json %>"
+                        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+                </div>
+                </div>
           </div>
         </div>
-
-          <div class="mt-4"style="height: 30vh; margin-top: 50px;"
-                  data-controller="map"
-                  data-map-markers-value="<%= @markers.to_json %>"
-                  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
-   <div style="margin-top: 8vh;">hello world</div>
-
+    </div>
   </div>
 </div>

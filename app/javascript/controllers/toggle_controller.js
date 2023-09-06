@@ -20,6 +20,7 @@ export default class extends Controller {
  }
 
  alert () {
+
  alert("You don't have enough fitseek dollars! Go to your profile to buy more $$$ ");
  }
 }
