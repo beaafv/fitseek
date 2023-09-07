@@ -110,7 +110,7 @@ instructor3.save!
 
 puts "creating workout 3"
 
-file3 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693568596/IMG_3269_bn1r7r.jpg')
+file3 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1694098108/photo-1622599511051-16f55a1234d0_ba8ieo.jpg')
 workout_three = Workout.new(
   name: "Rumble Boxing",
   category: "Strength",
@@ -287,7 +287,7 @@ instructor9 = Instructor.create(
 instructor9.photo.attach(io: file9a, filename: "yoga.jpg", content_type: "image/png")
 instructor9.save!
 
-file9 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1693479314/mobility-1_iay8qn.jpg')
+file9 = URI.open('https://res.cloudinary.com/dxl592x6b/image/upload/v1694097916/metapic_rpp1jc.jpg')
 workout_nine = Workout.new(
   name: "Mobility at Fitness Lab",
   category: "Mobility",

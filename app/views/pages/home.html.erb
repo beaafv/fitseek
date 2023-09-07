@@ -5,15 +5,14 @@
       <p class="pfind"><strong>Find your next workout!</strong></p>
         <% if user_signed_in? %>
 
-          <p> Welcome back, <%= current_user.first_name %>!
+          <p class="mt-2"> Welcome back, <%= current_user.first_name %>!
 
           <p class="mb-2 mt-2 text-center"><%= link_to 'Get Started!', user_session_path, class:"btn btn-green form-control mt-2" %></p>
 
-          <p class="mb-2 mt-2 text-center"><%= link_to "Sign out", destroy_user_session_path, class:"btn btn-green form-control mt-2", data: {"turbo-method": :delete} %></p>
+          <p class="mt-2 text-decoration-underline", style="margin-top:200px:"><%= link_to "Sign out", destroy_user_session_path, class:"mt-4", data: {"turbo-method": :delete} %></p>
 
           <%else%>
           <p class="mb-2 mt-2 text-center"><%= link_to 'Get Started!', user_session_path, class:"btn btn-green form-control mt-2" %></p>
       <% end %>
 </div>
 </div>
-
