@@ -24,4 +24,21 @@ class PagesController < ApplicationController
   def refer_to_a_friend
     
   end
+
+  def add_points
+    @user = current_user
+    @user.fsdollars += 10
+    @user.fsdollars
+    @user.save
+    redirect_to dashboard_path
+    # if current_user
+    #   @user.fsdollars += 10
+    #   @user.fsdollars
+    #   @user.save
+    #   redirect_to dashboard_path, notice: 'Points added successfully'
+    # else
+    #   redirect_to refer_a_friend_path, alert: 'User not logged in'
+    # end
+  end
+
 end

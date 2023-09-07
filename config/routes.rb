@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   get '/test', to: "pages#test", as: :test
   get '/fitseek_info', to: "pages#fitseek_info", as: :fitseek
   get '/refer_to_a_friend', to: "pages#refer_to_a_friend", as: :refertoafriend
+  get '/add_points', to: 'pages#add_points', as: :add_points
 end
