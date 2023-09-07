@@ -3,6 +3,9 @@
 <% if user_signed_in?%>
 <%= render "shared/cardsprofilepage", user: @user %>
 <% end %>
+<% content_for :meta_title, "#{@workout.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @workout.description %>
+<% content_for :meta_image, cl_image_path(@workout.photo.key) if @workout.photo.attached? %>
 
 <%= render "shared/searchbar" %>
  <%= render "shared/card", workout: @workout %>

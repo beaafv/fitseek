@@ -22,5 +22,6 @@ class PagesController < ApplicationController
   end
 
   def refer_to_a_friend
+    
   end
 end
