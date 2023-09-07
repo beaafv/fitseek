@@ -2,4 +2,4 @@
 meta_name: "Fitseek"
 meta_title: "Fitseek - Unlock your potential, one workout at a time!"
 meta_description: "A personalized App to find workouts near you"
-meta_image: "metapic.jpg" # should exist in `app/assets/images/`
+meta_image: "metapic.png" # should exist in `app/assets/images/`
