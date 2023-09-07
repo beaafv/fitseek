@@ -9,7 +9,7 @@
               <div class="row justify-content-between p-4" style="gap:2vh;">
                   <h1><%= @workout.name %></h1>
                 <p><%= @workout.address %></p>
-                <p><strong>Class:</strong><%= @workout.name %></p>
+                <p><strong>Class Time: </strong><%= @workout.available_class_times.strftime("%H:%M") %></p>
                 <p> <strong>Class duration:</strong> <%=  @workout.duration%>h</p>
                 <p>Price: $<%= @workout.cost %> FitSeek dollars</p>
                 <p><%= @workout.description %></p>
@@ -17,10 +17,10 @@
                 <div data-controller="toggle" class="container d-flex justify-content-center">
                   <%= simple_form_for [@workout, @booking] do |f| %>
                     <% if (@workout.cost > @user.fsdollars) %>
-                      <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
+                      <%= f.input :date, label: "Choose your date and time", label_html: { class: "text-white"}, as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
                       <%= f.button :submit, "Book Now!", class:"btn loginbutton text-center mt-2", data: {action: "click->toggle#alert"} %>
                     <% else %>
-                      <%= f.input :date, label: "Choose your date and time", as: :string, input_html: { data: { controller: "datepicker" } }, class:"form-control2"%>
+                      <%= f.input :date, label: "Choose your date and time", as: :string, label_html: { class: "text-white"}, input_html: { data: { controller: "datepicker" } }, class:"text-white form-control2"%>
                       <%= f.button :submit, "Book Now!", class:"btn loginbutton text-center mt-2" %>
                       <% end %>
                   <% end %>

@@ -116,7 +116,7 @@ workout_three = Workout.new(
   category: "Strength",
   subcategory: "Boxing",
   description: "Rumble is group fitness for the individual, and we believe that working out should be fun and effective. Rumble Boxing is an all-level, 45-minute boxing and strength training workout powered by a mega-watt sound system and custom playlists available only at Rumble. 10 rounds, 2 fists, 0 experience necessary.",
-  address: "16 Eccleston Yards, Eccleston Place, London SW1W 9NF",
+  address: "16 Eccleston Yards, London SW1W 9NF",
   image: "x",
   available_class_times: "10",
   duration: 1,
