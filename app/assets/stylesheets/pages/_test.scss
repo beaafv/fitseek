@@ -20,6 +20,15 @@
     animation: spin 7.5s linear infinite;
 }
 
+.body-workouts {
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #cefe91, #000 43%, #343a40);
+  z-index: -1;
+  animation: spin 7.5s linear infinite;
+}
+
 
 @keyframes spin {
   0% {

@@ -1,26 +1,31 @@
 <%= render "shared/navbar2" %>
-<%= render "shared/searchbar" %>
 
 
-<div class="container d-flex  vh-250 justify-content-center body-home">
-  <div class="row justify-content-between align-items-center bg-dark m-4">
-    <div class="d-flex" style="gap:20px; flex-direction:column;">
-      <p><img src="<%= cl_image_path @instructor.photo.key%>", style="max-width:60vw;" alt="its here">
-      </p>
-        <h1 class="text-center"> Hi, I'm <%= @instructor.name %> </h1>
-        <p class="text-center"><strong>My Favourite Activity: </strong><%= @instructor.area_of_expertise %></p>
-        <p class="text-center"> <%= @instructor.certifications %></p>
-        <p class="text-center"> <%= @instructor.bio %></p>
-        <p class="text-center"> years of experience: <%= @instructor.years_experience %></p>
-          <div class="container", data-controller="toggle">
-            <a class="flip loginbutton form-control mt-3", data-action="click->toggle#functiontoggle">See <%= @instructor.name %>'s classes</a>
-              <% @workouts.each do |workout|%>
-                <div class="mt-4">
-                  <%= render "shared/instructorsworkout" %>
-                </div>
-              <% end %>
-          </div>
+<div class="container d-flex  vh-250 justify-content-center ">
+  <div class="body-workouts">
+
+    <div class="row justify-content-between align-items-center bg-dark m-4" style="border-radius: 20px;">
+      <div class="d-flex" style="gap:20px; flex-direction:column;">
+        <p style="padding-top: 20px;"><img src="<%= cl_image_path @instructor.photo.key%>", style="max-width:60vw; border-radius: 20px;" alt="its here">
+        </p>
+          <h1 class="text-center"> Hi, I'm <%= @instructor.name %> </h1>
+          <p class="text-center"><strong>My Favourite Activity: </strong><%= @instructor.area_of_expertise %></p>
+          <p class="text-center"> <%= @instructor.certifications %></p>
+          <p class="text-center"> <%= @instructor.bio %></p>
+          <p class="text-center"> years of experience: <%= @instructor.years_experience %></p>
+            <div class="container", data-controller="toggle">
+              <a class="flip loginbutton form-control mt-3", data-action="click->toggle#functiontoggle">See <%= @instructor.name %>'s classes</a>
+                <% @workouts.each do |workout|%>
+                  <div class="mt-4">
+                    <%= render "shared/instructorsworkout" %>
+                  </div>
+                <% end %>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
+
+   </div>
+<div style="margin-top:8vh;"></div>
+
 <%= render "shared/navbar" %>
