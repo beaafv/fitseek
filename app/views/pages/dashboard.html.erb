@@ -6,11 +6,10 @@
 
 
 
-<div class="justify-content-center mb-4", data-controller="toggle">
-  <div>
+<div class="justify-content-center mb-4" data-controller="toggle">
     <h4 data-action="click->toggle#functiontoggle" class="paragrafo m-3">Upcoming classes</h4>
         <% @bookings.each do |booking| %>
-        <div class="card-product mb-4", data-toggle-target="div1">
+        <div class="card-product mb-4" data-toggle-target="div1">
 
 
                 <div class="mt-2 p-3">
@@ -23,11 +22,8 @@
 
           <% end %>
       </div>
-  </div>
-</div>
 
-<div data-controller="toggle">
-    <div>
+
        <h4 data-action="click->toggle#functiontoggle2" class="paragrafo m-3"> Past classes</h4>
         <div class="card-product mb-4" data-toggle-target="div2" >
             <div class="m-2">
